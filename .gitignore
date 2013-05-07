@@ -1,0 +1,11 @@
+nbproject
+public/app/etc/local.xml
+public/app/etc/config.xml
+public/var/cache/*
+public/var/locks/*
+public/var/log/*
+public/var/session/*
+public/media/catalog/*
+public/downloader/.cache/*
+public/var/locks/*
+public/var/log/*

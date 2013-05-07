@@ -1,0 +1,62 @@
+<?php
+/**
+ * Magento
+ *
+ * @category    design
+ * @package     insales_default
+ * @copyright   Copyright (c) 2013 Magazento. (http://www.magazento.com)
+ *
+ *
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<?php echo $this->getChildHtml('footer_categoy_banners') ?>
+<?php echo $this->getChildHtml('product_viewed') ?>
+<footer>
+    <div class="footer-top"> 
+        <div class="footer-container container_16"> 
+            <div class="grid_12 omega">
+                <div class="footer-block">
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_container_left')->toHtml() ?>
+                    <?php echo $this->getChildHtml('newsletter') ?>
+                    <div class="payment-icons">
+                        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_container_left_payment')->toHtml() ?>
+                    </div>
+                </div>                   
+            </div>                   
+            <div class="grid_4 omega">
+                <div class="footer-block footer-divider">
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_container_right')->toHtml() ?>
+                </div>                    
+            </div>                   
+        </div>
+    </div>
+    <div class="footer-bottom"> 
+        <div class="footer-container container_16"> 
+            <div class="grid_4 omega">
+                <div class="footer-block">                
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links_one')->toHtml() ?>
+                </div>                   
+            </div>                   
+            <div class="grid_4 omega">
+                <div class="footer-block">                      
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links_two')->toHtml() ?>               
+                </div>                   
+            </div>                   
+            <div class="grid_4 omega">
+                <div class="footer-block">                      
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links_three')->toHtml() ?>                     
+                </div>                   
+            </div>                   
+            <div class="grid_4 omega">
+                <div class="footer-block">                      
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links_four')->toHtml() ?>                 
+                </div>                   
+            </div>                   
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="footer-ribbon">
+        <address><?php echo $this->getCopyright() ?></address>   
+    </div>
+</footer>

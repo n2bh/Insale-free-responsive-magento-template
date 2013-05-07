@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <modules>
+        <Magazento_Insale>
+            <version>0.0.1</version>
+        </Magazento_Insale>
+    </modules>
+    
+    <global>
+        <blocks>
+            <insale>
+                <class>Magazento_Insale_Block</class>
+            </insale>
+            <reports>
+                <rewrite>
+                    <product_viewed>Magazento_Insale_Block_Product_Viewed</product_viewed>
+                </rewrite>
+            </reports>            
+        </blocks>
+        <helpers>
+            <insale>
+                <class>Magazento_Insale_Helper</class>
+            </insale>
+        </helpers>
+    </global>
+</config>

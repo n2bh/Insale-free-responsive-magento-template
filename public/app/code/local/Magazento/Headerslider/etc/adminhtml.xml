@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <magazento>
+            <title>Magazento</title>
+            <sort_order>71</sort_order>
+            <children>
+                <headerslider translate="title" module="headerslider">
+                    <title>HeaderSlider</title>
+                    <sort_order>15</sort_order>
+                    <children>
+                        <slide translate="title">
+                            <title>Manage Slides</title>
+                            <action>headerslider/admin_slide/index</action>
+                            <sort_order>10</sort_order>
+                        </slide>
+                    </children>
+                </headerslider>
+            </children>
+        </magazento>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <headerslider translate="title" module="headerslider">
+                                        <title>FirstSlider Section</title>
+                                    </headerslider>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <magazento>
+                        <title>Magazento.com</title>
+                        <sort_order>71</sort_order>
+                        <children>
+                            <headerslider translate="title" module="headerslider">
+                                <title>FirstSlider</title>
+                                <sort_order>15</sort_order>
+                                <children>
+                                    <slide translate="title">
+                                        <title>Manage slides</title>
+                                        <sort_order>10</sort_order>
+                                    </slide>
+                                </children>
+                            </headerslider>
+                        </children>
+                    </magazento>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
