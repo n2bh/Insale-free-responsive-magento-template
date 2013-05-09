@@ -27,6 +27,7 @@
             <action method="addItem"><type>skin_js</type><name>js/jquery-1.9.1.min.js</name><params/></action>   
             <action method="addItem"><type>skin_js</type><name>js/jquery.hoverIntent.min.js</name><params/></action>   
             <action method="addItem"><type>skin_js</type><name>js/jquery.iosslider.min.js</name><params/></action>   
+            <action method="addItem"><type>skin_js</type><name>js/jquery.elevateZoom-2.5.5.min.js</name><params/></action>   
             <action method="addItem"><type>skin_js</type><name>js/script.js</name><params/></action>   
 <!--            <action method="addItem"><type>skin_js</type><name>js/jquery.easing.js</name><params/></action>   
             <action method="addItem"><type>skin_js</type><name>js/css3-mediaqueries.js</name><params/><if>lt IE 9</if></action>-->

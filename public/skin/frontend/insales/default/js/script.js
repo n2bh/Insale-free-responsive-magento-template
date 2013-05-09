@@ -69,7 +69,7 @@ jQuery(function($){
 //        }
 //    });
     
-    // Product Items
+    /* Product Items */    
     $(".products-grid .item").hover(
         function() {
             $(this).removeClass("shadow");
@@ -82,14 +82,59 @@ jQuery(function($){
         }
     );
         
-    /* some custom settings */
+    /* Recently Viewed */
     $('.iosSlider-recently').iosSlider({
         responsiveSlideWidth: true,
         desktopClickDrag: true,
-        navNextSelector: $('.recently-prev'),
-        navPrevSelector: $('.recently-next')        
+        navNextSelector: $('.recently-viewed .scroll-left'),
+        navPrevSelector: $('.recently-viewed .scroll-right')        
     });
+    
+    /* Recently Viewed */    
+    $('.iosSlider-upsell').iosSlider({
+        responsiveSlideWidth: true,
+        desktopClickDrag: true,
+        navNextSelector: $('.box-up-sell .scroll-left'),
+        navPrevSelector: $('.box-up-sell .scroll-right')        
+    });
+    
+    /* Related Products */    
+    $('.iosSlider-related').iosSlider({
+        responsiveSlideWidth: true,
+        desktopClickDrag: true,
+        navNextSelector: $('.box-related .scroll-left'),
+        navPrevSelector: $('.box-related .scroll-right')        
+    });
+        
+    
 
+    /* Product Zoom */
+//    $('#elevatezoom-product').elevateZoom();
+        $("#elevatezoom-product").elevateZoom({
+          zoomType : "inner",
+          cursor: "crosshair"
+        });
+//        $("#elevatezoom-product").elevateZoom({
+//          zoomType				: "lens",
+//          lensShape : "round",
+//          lensSize    : 200
+//        });        
+
+    /* Product Tabs */
+    jQuery('#tabs .tab-item').hide();
+    jQuery('#tabs .tab-item:first').show();
+    jQuery('#tabs ul li:first').addClass('active');
+
+    jQuery('#tabs ul li a').click(function(){
+            jQuery('#tabs ul li').removeClass('active');
+            jQuery(this).parent().addClass('active');
+            var currentTab = jQuery(this).attr('href');
+            jQuery('#tabs .tab-item').hide();
+            jQuery(currentTab).show();
+            return false;
+            });
+        
+        
         
 	
 });

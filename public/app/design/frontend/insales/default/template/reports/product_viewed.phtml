@@ -21,12 +21,12 @@
                     <section class="block-list block-viewed">
                         <header>
                             <h2 class="grid_4"><?php echo $this->__('Recently Viewed') ?></h2>
-                            <nav class="navigation-buttons">
-                                <?php if ($_products->getSize() >7): ?>
-                                    <button type="button" class="button recently-next"><span><span><?php echo $this->__('Scroll Left') ?></span></span></button>
-                                    <button type="button" class="button recently-prev"><span><span><?php echo $this->__('Scroll Right') ?></span></span></button>   
-                                <?php endif; ?>
-                            </nav>    
+                            <?php if ($_products->getSize() >7): ?>                            
+                                <nav class="navigation-buttons">
+                                    <button type="button" class="button scroll-left"><span><span><?php echo $this->__('Scroll Left') ?></span></span></button>
+                                    <button type="button" class="button scroll-right"><span><span><?php echo $this->__('Scroll Right') ?></span></span></button>   
+                                </nav>       
+                            <?php endif; ?>                            
                         </header>
                         <div class="block-content iosSlider-recently">
                             <ul id="recently-viewed-items">
