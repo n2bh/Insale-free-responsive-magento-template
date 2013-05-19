@@ -23,11 +23,15 @@
     <div class="page">
         <?php echo $this->getChildHtml('header') ?>
         <?php echo $this->getChildHtml('breadcrumbs') ?>
+        <div class="header-image">
+        </div>
         <div class="main-container col1-layout container_16">
-            <div class="main">        
-                <div class="col-main grid_16">
-                    <?php echo $this->getChildHtml('global_messages') ?>
-                    <?php echo $this->getChildHtml('content') ?>
+            <div class="grid_16">            
+                <div class="main">        
+                    <div class="col-main">
+                        <?php echo $this->getChildHtml('global_messages') ?>
+                        <?php echo $this->getChildHtml('content') ?>
+                    </div>
                 </div>
             </div>
         </div>

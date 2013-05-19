@@ -25,10 +25,10 @@
  */
 /* @var $this Mage_Checkout_Block_Onepage_Progress */
 ?>
-<div class="block block-progress opc-block-progress">
-    <div class="block-title">
-        <strong><span><?php echo $this->__('Your Checkout Progress') ?></span></strong>
-    </div>
+<section class="block block-progress opc-block-progress">
+    <header class="block-title">
+        <span><?php echo $this->__('Your Checkout Progress') ?></span>
+    </header>
     <div class="block-content">
         <dl>
         <?php if ($this->getCheckout()->getStepData('billing', 'is_show')): ?>
@@ -112,4 +112,5 @@
         <?php endif; ?>
         </dl>
     </div>
-</div>
+</section>
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('checkout_progress_banner')->toHtml();?>

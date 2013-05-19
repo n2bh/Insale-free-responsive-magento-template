@@ -27,19 +27,19 @@
 <?php if($crumbs && is_array($crumbs)): ?>
 <div class="breadcrumbs-container ">
     <div class="container_16">
-        <div class="breadcrumbs grid_16 alpha omega">
+        <div class="breadcrumbs grid_16">
             <ul>
                 <?php foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
                     <li class="<?php echo $_crumbName ?>">
                     <?php if($_crumbInfo['link']): ?>
                         <a href="<?php echo $_crumbInfo['link'] ?>" title="<?php echo $this->htmlEscape($_crumbInfo['title']) ?>"><?php echo $this->htmlEscape($_crumbInfo['label']) ?></a>
                     <?php elseif($_crumbInfo['last']): ?>
-                        <strong><?php echo $this->htmlEscape($_crumbInfo['label']) ?></strong>
+                        <span class="breadcrumbs-last"><?php echo $this->htmlEscape($_crumbInfo['label']) ?></span>
                     <?php else: ?>
                         <?php echo $this->htmlEscape($_crumbInfo['label']) ?>
                     <?php endif; ?>
                     <?php if(!$_crumbInfo['last']): ?>
-                        <span>/ </span>
+                        <span class="crumbs-divider">/ </span>
                     <?php endif; ?>
                     </li>
                 <?php endforeach; ?>

@@ -28,14 +28,22 @@
             <action method="addItem"><type>skin_js</type><name>js/jquery.hoverIntent.min.js</name><params/></action>   
             <action method="addItem"><type>skin_js</type><name>js/jquery.iosslider.min.js</name><params/></action>   
             <action method="addItem"><type>skin_js</type><name>js/jquery.elevateZoom-2.5.5.min.js</name><params/></action>   
+            <action method="addItem"><type>skin_js</type><name>js/jquery.fancybox.pack.js</name><params/></action>   
+            <action method="addCss"><stylesheet>css/jquery.fancybox.css</stylesheet><params/></action>    
+                        
+            <action method="addItem"><type>skin_js</type><name>js/jquery.ui.totop.min.js</name><params/></action>   
+            <action method="addItem"><type>skin_js</type><name>js/easing.js</name><params/></action>   
+            
+                                    
             <action method="addItem"><type>skin_js</type><name>js/script.js</name><params/></action>   
-<!--            <action method="addItem"><type>skin_js</type><name>js/jquery.easing.js</name><params/></action>   
-            <action method="addItem"><type>skin_js</type><name>js/css3-mediaqueries.js</name><params/><if>lt IE 9</if></action>-->
+
+            
+            <!--<action method="addItem"><type>skin_js</type><name>js/css3-mediaqueries.js</name><params/><if>lt IE 9</if></action>-->
                      
             <action method="addCss"><stylesheet>css/grid_responsive.css</stylesheet><params/></action>
-            
             <action method="addItem"><type>skin_js</type><name>js/jquery.flexslider-min.js</name><params/></action>               
             <action method="addCss"><stylesheet>css/flexslider.css</stylesheet><params/></action>           
+       
         </reference>
     </default>
 

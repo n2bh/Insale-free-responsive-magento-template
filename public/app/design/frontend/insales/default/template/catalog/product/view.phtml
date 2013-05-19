@@ -47,11 +47,44 @@
                 <input type="hidden" name="related_product" id="related-products-field" value="" />
             </div>
 
-            <div class="product-img-box grid_6 alpha omega">
-                <?php echo $this->getChildHtml('media') ?>
+            <div class="grid_7 alpha">
+                <div class="product-img-box">
+                    <?php 
+
+                        $today =  time();
+
+                        $_promo_sale='';
+                        $specialprice = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialPrice(); 
+                        $specialPriceFromDate = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialFromDate();
+                        $specialPriceToDate = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialToDate();
+
+                        if ($specialprice):
+                            if($today >= strtotime( $specialPriceFromDate) && $today <= strtotime($specialPriceToDate) 
+                                    || $today >= strtotime( $specialPriceFromDate) && is_null($specialPriceToDate)):
+                                $_promo_sale = '<div class="promo-sale"> </div>';
+                            endif;
+                        endif;     
+
+                        $_promo_new='';
+                        $newFromDate = $_product->getData('news_from_date');
+                        $newToDate = $_product->getData('news_to_date');
+        //                $newToDateTimestamp = Mage::getModel('core/date')->timestamp(strtotime($_product->getData('news_to_date')));
+                        if ($newFromDate):
+
+                            if($today >= strtotime( $newFromDate) && $today <= strtotime($newToDate) 
+                                    || $today >= strtotime( $newFromDate) && is_null($newToDate)):
+                                $_promo_new = '<div class="promo-new"> </div>';
+                            endif;
+                        endif;                        
+                    ?>             
+                    <?php echo $_promo_sale; ?>
+                    <?php echo $_promo_new; ?>
+                    
+                    <?php echo $this->getChildHtml('media') ?>
+                </div>
             </div>
 
-            <div class="grid_6">
+            <div class="grid_5 alpha">
                 <div class="product-shop hreview-aggregate">
                     <div class="product-name">
                         <h1 class="item name fn"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
@@ -60,8 +93,11 @@
                     <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
                     <?php echo $this->getChildHtml('alert_urls') ?>
                     <?php echo $this->getTierPriceHtml() ?>
-                    <?php echo $this->getChildHtml('product_type_data') ?>                    
-
+                    <div class="product-shop-data">
+                        <?php echo $this->getChildHtml('product_type_data') ?>          
+                        <p class="product-sku"> <?php echo $this->__('Sku') ?>: <?php echo $_product->getSku(); ?> </p>
+                    </div>
+                    
                     <?php if ($_product->getShortDescription()):?>
                         <div class="short-description">
                             <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
@@ -92,10 +128,28 @@
                 </div>        
 
             </div>        
-            <div class="product-sidebar grid_4">
-                <?php echo $this->getChildHtml('related_products') ?>                
-                <?php echo $this->getChildHtml('product.info1') ?>
-                <?php echo $this->getChildHtml('product.info2') ?>
+            <div class="grid_4 omega">
+                <div class="product-sidebar">
+                    <div class="social-buttons">
+                        <div class="social-twitter">
+                            <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>                
+                        </div>
+                        <div class="social-facebook">
+                            <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+                        </div>
+                        <div class="social-pinterest">
+                            <a href="//pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&media=http%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=Next%20stop%3A%20Pinterest" 
+                               data-pin-do="buttonPin" 
+                               data-pin-config="beside">
+                                <img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <?php echo $this->getChildHtml('related_products') ?>                
+                    <?php echo $this->getChildHtml('product.info1') ?>
+                    <?php echo $this->getChildHtml('product.info2') ?>
+                </div>        
             </div>        
 
             <div class="clearer"></div>
@@ -120,22 +174,22 @@
     <?php $product_tabs_info2 = $this->getLayout()->createBlock('cms/block')->setBlockId('product_tabs_info2')->toHtml(); ?>
     <?php $block_product_tabs_info1 = Mage::getModel('cms/block')->load('product_tabs_info1') ?>
     <?php $block_product_tabs_info2 = Mage::getModel('cms/block')->load('product_tabs_info2') ?>
-    <div class="grid_12 alpha omega">
+    <div class="grid_12 alpha">
         <div id="tabs">
             <ul class="tabs-heading">
-                <li class="active"><a href="#tab-1"><?php echo $this->__('Full Description') ?></a></li>
+                <li class="product-tab active"><a href="#tab-1"><?php echo $this->__('Full Description') ?></a></li>
 
                 <?php if ($product_additional): ?>                
-                    <li class=""><a href="#tab-additional"><?php echo $this->__('Additional Information') ?></a></li>
+                    <li class="product-tab"><a href="#tab-additional"><?php echo $this->__('Additional Information') ?></a></li>
                 <?php endif;?>     
 
-                <li class=""><a href="#tab-4"><?php echo $this->__('Product Tags') ?></a></li>
-
+                <li class="product-tab"><a href="#tab-4"><?php echo $this->__('Product Tags') ?></a></li>
+                <li class="product-tab"><a href="#tab-review"><?php echo $this->__('Product Reviews') ?></a></li>
                 <?php if ($block_product_tabs_info1): ?>                
-                    <li class=""><a href="#block_product_tabs_info1"><?php echo $block_product_tabs_info1->getTitle(); ?></a></li>
+                    <li class="product-tab"><a href="#block_product_tabs_info1"><?php echo $block_product_tabs_info1->getTitle(); ?></a></li>
                 <?php endif;?>                
                 <?php if ($block_product_tabs_info2): ?>                
-                    <li class=""><a href="#block_product_tabs_info2"><?php echo $block_product_tabs_info2->getTitle(); ?></a></li>
+                    <li class="product-tab"><a href="#block_product_tabs_info2"><?php echo $block_product_tabs_info2->getTitle(); ?></a></li>
                 <?php endif;?>                
             </ul>
             <div id="tab-1" class="tab-item" style="display: block;">
@@ -153,6 +207,11 @@
             <div id="tab-4" class="tab-item" style="display: none;">
                 <div class="tab-content">
                     <?php echo $this->getChildHtml('product_additional_data') ?> 
+                </div>
+            </div>
+            <div id="tab-review" class="tab-item" style="display: none;">
+                <div class="tab-content">
+                    <?php echo $this->getChildHtml('product_review') ?>
                 </div>
             </div>
 
@@ -175,8 +234,10 @@
             <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('product_tabs_bottom')->toHtml();?>
         </div>
     </div>      
-    <div class="grid_4">    
-        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('product_tabs_sidebar')->toHtml();?>
+    <div class="grid_4 alpha">    
+        <div class="tabs-banner-sidebar">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('product_tabs_sidebar')->toHtml();?>
+        </div>
     </div>
     
     

@@ -49,7 +49,7 @@ Default layout, loads most of the pages
             <block type="catalog/product_compare_sidebar" after="ajaxnavigation.catalog.leftnav" name="catalog.compare.sidebar" template="catalog/product/compare/sidebar.phtml"/>                
             
             <block type="core/template" name="catalog.sidebar.callout" after="ajaxnavigation.catalog.leftnav" template="callouts/left_col.phtml">
-                <block type="cms/block" name="sidebar_promo_banner">
+                <block type="cms/block" name="sidebar_block">
                     <action method="setBlockId"><block_id>sidebar_promo_banner</block_id></action>
                 </block>   
             </block>
@@ -60,7 +60,13 @@ Default layout, loads most of the pages
                             
             <block type="core/template" name="catalog.sidebar.info2" after="-" template="callouts/info.phtml">
                 <action method="addData"><data><static_block>sidebar_info2</static_block></data></action>
-            </block>                    
+            </block>     
+             
+            <block type="core/template" name="catalog.sidebar.facebook" after="-" template="callouts/left_col.phtml">
+                <block type="cms/block" name="sidebar_block">
+                    <action method="setBlockId"><block_id>sidebar_facebook</block_id></action>
+                </block>   
+            </block>
 
         </reference>
         <reference name="right">
@@ -214,6 +220,10 @@ Product view
         <reference name="content">
             <block type="catalog/product_view" name="product.info" template="catalog/product/view.phtml">
                 
+    <block type="review/product_view_list" name="product.info.product_additional_data" as="product_review" template="review/product/view/list.phtml">
+        <block type="review/form" name="product.review.form" as="review_form"/>
+    </block>
+                 
                 <block type="core/template" name="product.info1" after="-" template="callouts/info.phtml">
                     <action method="addData"><data><static_block>product_info1</static_block></data></action>
                 </block>                    

@@ -10,25 +10,30 @@
  * Template for Mage_Page_Block_Html
  */
 ?>
-<?php echo $this->getChildHtml('footer_categoy_banners') ?>
+<div class="container_16">
+    <div class="grid_16">
+        <?php echo $this->getChildHtml('footer_categoy_banners') ?>
+    </div>
+</div>                
 <?php echo $this->getChildHtml('product_viewed') ?>
+
 <footer>
     <div class="footer-top"> 
         <div class="footer-container container_16"> 
-            <div class="grid_12 omega">
-                <div class="footer-block">
-                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_container_left')->toHtml() ?>
-                    <?php echo $this->getChildHtml('newsletter') ?>
-                    <div class="payment-icons">
-                        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_container_left_payment')->toHtml() ?>
-                    </div>
+                <div class="grid_12 omega">
+                    <div class="footer-block">
+                        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_container_left')->toHtml() ?>
+                        <?php echo $this->getChildHtml('newsletter') ?>
+                        <div class="payment-icons">
+                            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_container_left_payment')->toHtml() ?>
+                        </div>
+                    </div>                   
                 </div>                   
-            </div>                   
-            <div class="grid_4 omega">
-                <div class="footer-block footer-divider">
-                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_container_right')->toHtml() ?>
-                </div>                    
-            </div>                   
+                <div class="grid_4 omega">
+                    <div class="footer-block footer-divider">
+                        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_container_right')->toHtml() ?>
+                    </div>                    
+                </div>                   
         </div>
     </div>
     <div class="footer-bottom"> 

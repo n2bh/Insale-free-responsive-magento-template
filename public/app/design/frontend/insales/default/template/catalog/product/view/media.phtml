@@ -37,8 +37,8 @@
 <?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
 <p class="product-image product-image-zoom">
     <?php
-        $_img = '<img class="photo fn" id="elevatezoom-product" 
-            src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(460,560).'" 
+        $_img = '<img id="zoom-image" class="product-big-image photo fn"
+            src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(500,610).'" 
                 alt="'.$this->getImageLabel().'" 
                     title="'.$this->htmlEscape($this->getImageLabel()).'" 
                         data-zoom-image="'.$this->helper('catalog/image')->init($_product, 'image').'"
@@ -57,15 +57,17 @@
 </p>
 <?php endif; ?>
 <?php if (count($this->getGalleryImages()) > 0): ?>
-<div class="more-views">
+<div id="image-gallery" class="more-views">
     <ul>
-    <?php foreach ($this->getGalleryImages() as $_image): ?>
+    <?php $i=0; foreach ($this->getGalleryImages() as $_image): $i++;?>
         <li>
-            <a href="#"
-               title="<?php echo $_image->getLabel() ?>">
-                <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(120,144); ?>" 
-                     alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" />
-            </a>
+            <a href="#" class="zoom-small-image"
+               data-image="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(500,610); ?>" 
+               data-zoom-image="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile());?>">
+                <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(120,144); ?>"
+                     alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>"
+                      >
+            </a>    
         </li>
     <?php endforeach; ?>
     </ul>

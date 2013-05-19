@@ -160,10 +160,10 @@ input.input-text,select,textarea {
     border:1px solid #f2f2f2; 
 }
 input.input-text,textarea { 
-    padding: 6px; 
-/*    -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);    */
+    padding: 7px; 
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
 }
 select { padding:1px; }
 select option { padding-right:10px; }
@@ -173,6 +173,7 @@ textarea { overflow:auto; }
 input.radio { margin-right:3px; }
 input.checkbox { margin-right:3px; }
 /*input.qty { width:2.5em !important; }*/
+
 
 /*button.button::-moz-focus-inner { padding:0; border:0; }  FF Fix*/ 
 button.button { overflow:visible; width:auto; border:0; padding:0; margin:0; background:transparent; cursor:pointer; }
@@ -189,32 +190,19 @@ button.button span {
     text-transform: uppercase;
 }
 button.button span span{ padding: 0; }
-/*button.button span span { background-position:100% 0; padding:0 12px 0 4px; }*/
-
-/*button.button span span{
-    background: #fe6b6b;
-    overflow: visible;
-    width: auto;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    padding: 10px 20px;
-    color: #fff;
-    border-radius: 18px;
-    text-transform: uppercase;
-}*/
-
 button.button span:hover, button.button span:hover span {
     background: #5d5d5d;
 }
 button.button span:hover {
     background: #5d5d5d;
 }
-
+.buttons-set button.button span { 
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;    
+    background:#f0525d; 
+    
+}    
 
 
 button.disabled {}
@@ -324,9 +312,9 @@ p.control input.radio { margin-right:6px; }
 .form-list .customer-dob .dob-year { width:140px; }
 .form-list .customer-dob .dob-year input.input-text { width:134px; }
 
-.buttons-set { clear:both; margin:5px 0 0; padding:5px; }
+.buttons-set { clear:both; margin:0 0 0; padding: 5px 0; }
 .buttons-set .back-link { float:left; }
-.buttons-set button.button { float:right; }
+.buttons-set button.button { float:right;margin-top: 10px; }
 .buttons-set p.required { margin:0 0 5px; }
 
 .buttons-set-order {}

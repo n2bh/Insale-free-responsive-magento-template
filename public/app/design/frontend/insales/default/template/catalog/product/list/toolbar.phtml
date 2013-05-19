@@ -35,7 +35,7 @@
 <div class="toolbar">
     
     <?php if( $this->isEnabledViewSwitcher() ): ?>
-        <div class="view-mode grid_2 alpha omega">
+        <div class="view-mode grid_2 omega">
             <?php $_modes = $this->getModes(); ?>
             <?php if($_modes && count($_modes)>1): ?>
             <?php foreach ($this->getModes() as $_code=>$_label): ?>
@@ -62,7 +62,7 @@
     </div>
 
     <?php if( $this->isExpanded() ): ?>
-        <div class="sorter grid_4 alpha">
+        <div class="sorter grid_4">
             
             <div class="limiter">
                 <label><?php echo $this->__('Show') ?>:</label>

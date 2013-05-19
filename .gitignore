@@ -9,3 +9,4 @@ public/media/catalog/*
 public/downloader/.cache/*
 public/var/locks/*
 public/var/log/*
+public/var/report/*

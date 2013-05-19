@@ -31,6 +31,7 @@
  * @package    Mage_Checkout
  * @author      Magento Core Team <core@magentocommerce.com>
  */
+
 class Mage_Checkout_Block_Cart_Crosssell extends Mage_Catalog_Block_Product_Abstract
 {
     /**

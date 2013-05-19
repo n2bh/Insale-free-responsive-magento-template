@@ -16,11 +16,21 @@
                     <product_viewed>Magazento_Insale_Block_Product_Viewed</product_viewed>
                 </rewrite>
             </reports>            
+            <checkout>
+                <rewrite>
+                    <cart_crosssell>Magazento_Insale_Block_Cart_Crosssell</cart_crosssell>
+                </rewrite>
+            </checkout>            
         </blocks>
         <helpers>
             <insale>
                 <class>Magazento_Insale_Helper</class>
             </insale>
         </helpers>
+        <models>
+            <insale>
+                <class>Magazento_Insale_Model</class>
+            </insale>   
+        </models>        
     </global>
 </config>

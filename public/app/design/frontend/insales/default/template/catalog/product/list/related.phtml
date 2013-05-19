@@ -38,12 +38,12 @@
     </header>
     <div class="related-content">
         <div class="iosSlider-related">
-            <ul id="block-related">
+            <ul id="block-related" class="slider-items">
                 <?php foreach($this->getItems() as $_item): ?>
                     <li class="item">
                         <div class="product-item">
                             <img class="photo fn" 
-                                 src="<?php echo $this->helper('catalog/image')->init($_item, 'small_image')->resize(260,312); ?>" 
+                                 src="<?php echo $this->helper('catalog/image')->init($_item, 'small_image')->resize(230,280); ?>" 
                                  alt="<?php echo $this->htmlEscape($this->getImageLabel($_item, 'small_image')) ?>" 
                                  />
                             <h2 class="product-name">

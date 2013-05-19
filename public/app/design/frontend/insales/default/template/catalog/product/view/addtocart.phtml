@@ -30,9 +30,9 @@
     <div class="add-to-cart">
         <div class="qty-container">
             <?php if(!$_product->isGrouped()): ?>
-            <span class="qty-decrease">-</span>
+            <input id="qty-decrease"value="-" type="button">
             <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->__('Qty') ?>" class="input-text qty" />
-            <span class="qty-increase">+</span>
+            <input id="qty-increase" value="+" type="button">
             <?php endif; ?>
         </div>        
         <button type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>
