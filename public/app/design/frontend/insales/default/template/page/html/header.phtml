@@ -11,75 +11,77 @@
  * Template for Mage_Page_Block_Html
  */
 ?>
-<header class="website-header default">
-    <div class="website-header-bg">
-        <div class="header-container container_16"> 
-                <div class="logo grid_3">
-                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
-                </div>    
-                <div class="navigation grid_13">
+<div class="header-wrapper">
+    <header class="website-header default">
+        <div class="website-header-scroll ">
+            <div class="header-container container_16"> 
+                    <div class="grid_3 omega">
+                        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+                    </div>    
+                    <div class="navigation grid_13">
 
-                <div class="header-top">
-                    <div class="header-locale grid_4 omega">
-                        <?php echo $this->getChildHtml('currency') ?>   
-                        <?php echo $this->getChildHtml('store_language') ?>   
+                    <div class="header-top">
+                        <div class="header-locale grid_4 omega">
+                            <?php echo $this->getChildHtml('currency') ?>   
+                            <?php echo $this->getChildHtml('store_language') ?>   
+                        </div>
+
+                        <div class="header-welcome-msg grid_5">
+                           <p class="welcome-msg"><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></p>
+                        </div>
+
+                        <div class="header-toplinks grid_4 omega">
+                            <?php echo $this->getChildHtml('topLinks') ?>
+                        </div>
                     </div>
 
-                    <div class="header-welcome-msg grid_5">
-                       <p class="welcome-msg"><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></p>
-                    </div>
+                    <div class="header-bottom">
+                        <nav class="grid_7">
+                            <?php echo $this->getChildHtml('topMenu') ?>
+                        </nav>        
+                        <div class="grid_6 alpha omega">    
 
-                    <div class="header-toplinks grid_4 omega">
-                        <?php echo $this->getChildHtml('topLinks') ?>
-                    </div>
-                </div>
-
-                <div class="header-bottom">
-                    <nav class="grid_7">
-                        <?php echo $this->getChildHtml('topMenu') ?>
-                    </nav>        
-                    <div class="grid_6 alpha omega">    
-
-                        <div class="cart dropdown-container">
-                            <a href="<?php echo $this->getUrl('checkout/cart')?>">
-                                <span class="cart-icon"></span>
-                                <span class="cart-counter"><?php echo $this->__('In Cart') ?> (<?php echo Mage::getModel('checkout/cart')->getItemsQty(); ?>) </span>
-                            </a>
-                            <div class="dropdown-content">
-                                <?php echo $this->getChildHtml('cart_header') ?>
+                            <div class="cart dropdown-container">
+                                <a href="<?php echo $this->getUrl('checkout/cart')?>">
+                                    <span class="cart-icon"></span>
+                                    <span class="cart-counter"><?php echo $this->__('In Cart') ?> (<?php echo Mage::getModel('checkout/cart')->getItemsQty(); ?>) </span>
+                                </a>
+                                <div class="dropdown-content">
+                                    <?php echo $this->getChildHtml('cart_header') ?>
+                                </div>     
                             </div>     
-                        </div>     
 
-                        <div class="wishlist dropdown-container">
-                            <a class="wishlist-icon" href="<?php echo $this->helper('wishlist')->getListUrl();?>">
-                                <?php echo $this->__('Wishlist') ?>
-                            </a>
-                            <?php
-                            $wishlist = $this->getChildHtml('wishlist');
-                            if (!$wishlist) {
-                                $wishlist = $this->__('You have no items in your wishlist.');
-                            }
-                            ?>
-                            <div class="dropdown-content">
-                                <div class="wishlist-content">
-                                    <div class="content-triangle">
-                                    </div>                                     
-                                    <?php echo $wishlist; ?>  
+                            <div class="wishlist dropdown-container">
+                                <a class="wishlist-icon" href="<?php echo $this->helper('wishlist')->getListUrl();?>">
+                                    <?php echo $this->__('Wishlist') ?>
+                                </a>
+                                <?php
+                                $wishlist = $this->getChildHtml('wishlist');
+                                if (!$wishlist) {
+                                    $wishlist = '<p class="empty">'.$this->__('You have no items in your wishlist.')."</p>";
+                                }
+                                ?>
+                                <div class="dropdown-content">
+                                    <div class="wishlist-content">
+                                        <div class="content-triangle">
+                                        </div>                                     
+                                        <?php echo $wishlist; ?>  
+                                    </div>
                                 </div>
-                            </div>
 
-                        </div>     
+                            </div>     
 
 
-                        <div class="topsearch">
-                            <?php echo $this->getChildHtml('topSearch') ?>
-                        </div>                     
-                    </div>        
-                </div>            
+                            <div class="topsearch">
+                                <?php echo $this->getChildHtml('topSearch') ?>
+                            </div>                     
+                        </div>        
+                    </div>            
+                </div>
             </div>
-        </div>
-    </div>
-</header>
+
+    </header>
+</div>    
 <?php
     $page = Mage::app()->getFrontController()->getRequest()->getRouteName();
     if($page =='cms'){
