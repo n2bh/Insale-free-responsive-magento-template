@@ -2,7 +2,28 @@ jQuery.noConflict();
 
 jQuery(function($){
     
+    $('.logo-small').hide();
+    $('.logo-fixed').hide();
+    $('.logo-big').show();
+            
+    function logoImageSwatch () {
+        if ($(window).width() >= 1280 ) {
+            $('.logo-small').hide();
+            $('.logo-big').show();
+        } else {
+            $('.logo-small').show();
+            $('.logo-big').hide();
+        }
+    }
 
+    logoImageSwatch();
+    $(window).resize(function() {
+        if (!$('.logo-fixed').is(":visible")) {
+           logoImageSwatch(); 
+        }
+        
+    });        
+        
     var config = {
         over: function(){
             if ($(this).hasClass('.dropdown-container')){
@@ -31,10 +52,16 @@ jQuery(function($){
     $(window).scroll(function(){
         if($(this).scrollTop() > pos.top+header.height() && header.hasClass('default')){
             header.fadeOut(10, function(){ 
-               $(this).removeClass('default').addClass('fixed').fadeIn(10);
+                $(this).removeClass('default').addClass('fixed').fadeIn(10);
+                $('.logo-fixed').show();
+                $('.logo-small').hide();
+                $('.logo-big').hide();
+               
             });
         } else if($(this).scrollTop() <= 100 && header.hasClass('fixed')){
             header.fadeOut(10, function(){
+                $('.logo-fixed').hide();
+                logoImageSwatch();
                 $(this).removeClass('fixed').addClass('default').fadeIn(10);
             });
         }
@@ -80,10 +107,15 @@ jQuery(function($){
     /* Header search */    
     $(".search-container #search").hover(
         function() {
-            $(this).animate({width: '200px'}, { queue: false, duration: 200 });
+            if ($(window).width() >= 1280 ) {
+                $(this).animate({width: '200px'}, { queue: false, duration: 200 });
+            }
         }, 
         function() {
-            $(this).animate({width: '155px'}, { queue: false, duration: 200 });          
+            if ($(window).width() >= 1280 ) {
+                $(this).animate({width: '155px'}, { queue: false, duration: 200 });          
+            }            
+            
         }
     );
         

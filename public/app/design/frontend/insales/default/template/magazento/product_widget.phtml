@@ -28,7 +28,7 @@
 <?php if($collection->count()): ?>
 <section class="widget-new-products">
     
-    <header class="grid_4 omega">
+    <header class="grid_4 alpha">
         <div class="new-products-block">
         <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($this->getStaticBlock())->toHtml(); ?>
 
@@ -41,7 +41,7 @@
         </div>    
     </header>
     
-    <div class="grid_10 omega">
+    <div class="grid_12 omega">
         <div class="block-content iosSlider-newproducts">
             <ul class="slider-items">
                 <?php foreach ($collection as $_item): ?>
@@ -60,15 +60,6 @@
                                     <div class="divider-diamond"></div>
                                 </div>   
                                 <?php echo $this->getPriceHtml($_item, true) ?>
-                                <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_item) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
-                                <ul class="add-to-links">
-                                    <?php if ($this->helper('wishlist')->isAllow()) : ?>
-                                        <li><a href="<?php echo $this->getAddToWishlistUrl($_item) ?>" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a></li>
-                                    <?php endif; ?>
-                                    <?php if($_compareUrl=$this->getAddToCompareUrl($_item)): ?>
-                                        <li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></li>
-                                    <?php endif; ?>
-                                </ul>
                             </div>
                         </div>
                     </li>
