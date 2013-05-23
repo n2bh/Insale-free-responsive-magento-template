@@ -26,7 +26,7 @@
 ?>
 <?php $block_identifier = $this->getStaticBlock(); ?>
 <?php $block = Mage::getModel('cms/block')->load($block_identifier); ?>
-<?php if ($block->getTitle()): ?>
+<?php if ($block->getTitle() && $block->getData('is_active')): ?>
 <section class="block block-info">
     <header class="block-title">
         <span><?php echo $block->getTitle(); ?></span>

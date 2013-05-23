@@ -85,7 +85,7 @@
         </reference>
         
         <reference name="left">
-            <block type="ajaxnavigation/catalogSearch_layer" name="ajaxnavigation.catalogsearch.leftnav" after="currency" template="ip_ajaxnavigation/layer/view.phtml"/>
+            <block type="ajaxnavigation/catalogSearch_layer" name="ajaxnavigation.catalogsearch.leftnav" before="-" template="ip_ajaxnavigation/layer/view.phtml"/>
         </reference>
 
         <reference name="before_body_end">

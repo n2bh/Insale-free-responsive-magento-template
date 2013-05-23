@@ -43,7 +43,11 @@
                 <p class="product-name"><a href="<?php echo $this->getProductUrl($_item) ?>"><?php echo $this->escapeHtml($product->getName()) ?></a></p>
                 <?php echo $this->getPriceHtml($product, false, '-wishlist') ?>
                 <?php if ($product->isSaleable() && $product->isVisibleInSiteVisibility()): ?>
-                    <a href="<?php echo $this->getItemAddToCartUrl($_item) ?>" class="link-cart"><?php echo $this->__('Add to Cart') ?></a>
+                    
+                <a href="<?php echo $this->getItemAddToCartUrl($_item) ?>" 
+                   class="link-cart"><?php echo $this->__('Add to Cart') ?>
+                </a>
+                
                 <?php endif; ?>
             </div>
         </li>
@@ -51,7 +55,7 @@
     </ol>
     <script type="text/javascript">decorateList('wishlist-sidebar');</script>
     <div class="actions">
-        <a href="<?php echo $this->helper('wishlist')->getListUrl() ?>"><?php echo $this->__('Go to Wishlist') ?></a>
+        <button type="button" title="<?php echo $this->__('Checkout') ?>" class="f-right button view-cart" onclick="setLocation('<?php echo $this->helper('wishlist')->getListUrl() ?>')"><span><span><?php echo $this->__('Go to Wishlist') ?></span></span></button>
     </div>
     <?php else: ?>
         <p class="empty"><?php echo $this->__('You have no items in your wishlist.') ?></p>

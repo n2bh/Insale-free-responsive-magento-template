@@ -19,6 +19,7 @@
             <checkout>
                 <rewrite>
                     <cart_crosssell>Magazento_Insale_Block_Cart_Crosssell</cart_crosssell>
+                    <cart_sidebar>Magazento_Insale_Block_Cart_Sidebar</cart_sidebar>                    
                 </rewrite>
             </checkout>            
         </blocks>

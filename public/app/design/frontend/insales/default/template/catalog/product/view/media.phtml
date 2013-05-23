@@ -38,7 +38,7 @@
 <p class="product-image product-image-zoom">
     <?php
         $_img = '<img id="zoom-image" class="product-big-image photo fn"
-            src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(500,610).'" 
+            src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(800,976).'" 
                 alt="'.$this->getImageLabel().'" 
                     title="'.$this->htmlEscape($this->getImageLabel()).'" 
                         data-zoom-image="'.$this->helper('catalog/image')->init($_product, 'image').'"
@@ -62,7 +62,7 @@
     <?php $i=0; foreach ($this->getGalleryImages() as $_image): $i++;?>
         <li>
             <a href="#" class="zoom-small-image"
-               data-image="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(500,610); ?>" 
+               data-image="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(800,976); ?>" 
                data-zoom-image="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile());?>">
                 <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(120,144); ?>"
                      alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>"

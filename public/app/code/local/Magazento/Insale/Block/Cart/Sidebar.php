@@ -24,20 +24,28 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-/**
- * Cart crosssell list
- *
- * @category   Mage
- * @package    Mage_Checkout
- * @author     Magento Core Team <core@magentocommerce.com>
- */
 
-class Magazento_Insale_Block_Cart_Crosssell extends Mage_Checkout_Block_Cart_Crosssell
+/**
+ * Wishlist sidebar block
+ *
+ * @category    Mage
+ * @package     Mage_Checkout
+ * @author      Magento Core Team <core@magentocommerce.com>
+ */
+class Magazento_Insale_Block_Cart_Sidebar extends Mage_Checkout_Block_Cart_Sidebar
 {
     /**
-     * Items quantity will be capped to this value
+     * Retrieve count of display recently added items
      *
-     * @var int
+     * @return int
      */
-    protected $_maxItemCount = 10;
+    public function getItemCount()
+    {
+        $count = $this->getData('item_count');
+        if (is_null($count)) {
+            $count = 99;
+            $this->setData('item_count', $count);
+        }
+        return $count;
+    }
 }

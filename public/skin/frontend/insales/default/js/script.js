@@ -22,7 +22,33 @@ jQuery(function($){
            logoImageSwatch(); 
         }
         
-    });        
+    }); 
+    
+    
+    var header = $('.website-header'),
+    pos = header.offset();
+    $(window).scroll(function(){
+        if ($(window).width() >= 767 ) {
+            if($(this).scrollTop() > pos.top+header.height() && header.hasClass('default')){
+                header.fadeOut(10, function(){ 
+                    $(this).removeClass('default').addClass('fixed').fadeIn(10);
+                    $('.logo-fixed').show();
+                    $('.logo-small').hide();
+                    $('.logo-big').hide();
+
+                });
+            } else if($(this).scrollTop() <= 100 && header.hasClass('fixed')){
+                header.fadeOut(10, function(){
+                    $('.logo-fixed').hide();
+                    logoImageSwatch();
+                    $(this).removeClass('fixed').addClass('default').fadeIn(10);
+                });
+            }
+        }
+    });
+    
+        
+    
         
     var config = {
         over: function(){
@@ -46,29 +72,6 @@ jQuery(function($){
         }
     };
     $('.dropdown-container').hoverIntent( config );
-    
-    var header = $('.website-header'),
-    pos = header.offset();
-    $(window).scroll(function(){
-        if($(this).scrollTop() > pos.top+header.height() && header.hasClass('default')){
-            header.fadeOut(10, function(){ 
-                $(this).removeClass('default').addClass('fixed').fadeIn(10);
-                $('.logo-fixed').show();
-                $('.logo-small').hide();
-                $('.logo-big').hide();
-               
-            });
-        } else if($(this).scrollTop() <= 100 && header.hasClass('fixed')){
-            header.fadeOut(10, function(){
-                $('.logo-fixed').hide();
-                logoImageSwatch();
-                $(this).removeClass('fixed').addClass('default').fadeIn(10);
-            });
-        }
-    });
-    
-    
-    
     
     /* Product Items */    
     $(".products-grid .item").hover(
@@ -196,7 +199,6 @@ jQuery(function($){
         desktopClickDrag: true,
         responsiveSlides: true,
         autoSlide: true,
-        snapToChildren: true,
         scrollbar: true,
         scrollbarDrag: true,
         scrollbarHide: false,
@@ -260,7 +262,9 @@ jQuery(function($){
             
     
     /* To Top */
-    $().UItoTop({ easingType: 'easeOutQuart' });
+    if ($(window).width() >= 767 ) {    
+        $().UItoTop({ easingType: 'easeOutQuart' });
+    }
         
 	
 });

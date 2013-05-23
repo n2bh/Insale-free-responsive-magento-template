@@ -109,22 +109,24 @@
                     <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                         <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
                     <?php endif;?>
+                    
+                    <div class="add-to-box">
+                        <?php if (!$this->hasOptions()):?>
 
-                    <?php if (!$this->hasOptions()):?>
-                        <div class="add-to-box">
-                            <?php if($_product->isSaleable()): ?>
-                                <?php echo $this->getChildHtml('addtocart') ?>
-                            <?php endif; ?>
+                                <?php if($_product->isSaleable()): ?>
+                                    <?php echo $this->getChildHtml('addtocart') ?>
+                                <?php endif; ?>
+                                <br class="clear">
+                                <?php echo $this->getChildHtml('addto') ?>
+
+                        <?php else:?>
                             <br class="clear">
                             <?php echo $this->getChildHtml('addto') ?>
-                        </div>
-                    <?php else:?>
-                        <br class="clear">
-                        <?php echo $this->getChildHtml('addto') ?>
-                    <?php endif; ?>
-                    <?php if ($this->canEmailToFriend()): ?>
-                        <a class="email-friend" href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><span class="email-friend-icon"></span><?php echo $this->__('Email to a Friend') ?></a>
-                    <?php endif; ?>                
+                        <?php endif; ?>
+                        <?php if ($this->canEmailToFriend()): ?>
+                            <a class="email-friend" href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><span class="email-friend-icon"></span><?php echo $this->__('Email to a Friend') ?></a>
+                        <?php endif; ?>  
+                    </div>
                 </div>        
 
             </div>        
@@ -234,7 +236,7 @@
             <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('product_tabs_bottom')->toHtml();?>
         </div>
     </div>      
-    <div class="grid_4 alpha">    
+    <div class="tabs-banner-container grid_4 alpha">    
         <div class="tabs-banner-sidebar">
             <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('product_tabs_sidebar')->toHtml();?>
         </div>
