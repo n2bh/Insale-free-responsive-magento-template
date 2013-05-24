@@ -46,9 +46,6 @@ jQuery(function($){
             }
         }
     });
-    
-        
-    
         
     var config = {
         over: function(){
@@ -259,17 +256,6 @@ jQuery(function($){
         return false;
     });
 
-//<script type="text/javascript">
-//        jQuery(window).load(function(){
-//            var $container = jQuery('.products-grid');
-//            $container.isotope({
-//                itemSelector: '.item',
-//                resizable: true,
-//                layoutMode : 'fitRows'
-//            });
-//        });
-//    </script>
-
     function isotopeProcessor(){
             jQuery('.products-grid .product-img-box img').load(function(){
                     var $container = jQuery('.products-grid');
@@ -289,3 +275,14 @@ jQuery(function($){
         
 	
 });
+
+
+
+    
+//    $(window).load(function () {
+//        $('.logo-container').animate({
+//                opacity: 'toggle'
+//            },300
+//        );
+//    });        
+         

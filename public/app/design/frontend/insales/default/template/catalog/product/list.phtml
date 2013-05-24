@@ -131,9 +131,11 @@
                         <div class="divider-line"></div>
                         <div class="divider-diamond"></div>
                     </div>    
-
-                    <?php echo $_promo_sale; ?>
-                    <?php echo $_promo_new; ?>
+                    
+                    <div class="promo-container">
+                        <?php echo $_promo_sale; ?>
+                        <?php echo $_promo_new; ?>                        
+                    </div>
                     
                     <?php //echo $this->getPriceHtml($_product, true) ?>
                     <div class="price-box pricerange">
@@ -157,8 +159,8 @@
                         <div class="divider-diamond"></div>
                     </div>    
                     
-                    <?php echo $_promo_sale; ?>
-                    <?php echo $_promo_new; ?>
+                    <?php //echo $_promo_sale; ?>
+                    <?php //echo $_promo_new; ?>
                     
                     <?php if($_product->getRatingSummary()): ?>
                     <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>

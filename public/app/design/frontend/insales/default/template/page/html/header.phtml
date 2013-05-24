@@ -16,12 +16,14 @@
         <div class="website-header-scroll ">
             <div class="header-container container_16"> 
                     <div class="logo-container grid_3 omega">
-                        <a href="<?php echo $this->getUrl('') ?>" 
-                           title="<?php echo $this->getLogoAlt() ?>" class="logo">
-                            <img class="logotype logo-big"   src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" />
-                            <img class="logotype logo-small" src="<?php echo $this->getSkinUrl('images/logo-small.png') ?>" alt="<?php echo $this->getLogoAlt() ?>" />
-                            <img class="logo-fixed" src="<?php echo $this->getSkinUrl('images/logo-mini.png') ?>" alt="<?php echo $this->getLogoAlt() ?>" />
-                        </a>
+                        <div class="logo-container">
+                            <a href="<?php echo $this->getUrl('') ?>" 
+                               title="<?php echo $this->getLogoAlt() ?>" class="logo">
+                                <img class="logotype logo-big"   src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" />
+                                <img class="logotype logo-small" src="<?php echo $this->getSkinUrl('images/logo-small.png') ?>" alt="<?php echo $this->getLogoAlt() ?>" />
+                                <img class="logo-fixed" src="<?php echo $this->getSkinUrl('images/logo-mini.png') ?>" alt="<?php echo $this->getLogoAlt() ?>" />
+                            </a>
+                        </div>    
                     </div>    
                     <div class="navigation grid_13">
 

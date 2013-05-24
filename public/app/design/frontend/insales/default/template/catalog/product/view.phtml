@@ -77,8 +77,11 @@
                             endif;
                         endif;                        
                     ?>             
-                    <?php echo $_promo_sale; ?>
-                    <?php echo $_promo_new; ?>
+                    
+                    <div class="promo-container">
+                        <?php echo $_promo_sale; ?>
+                        <?php echo $_promo_new; ?>                        
+                    </div>
                     
                     <?php echo $this->getChildHtml('media') ?>
                 </div>
