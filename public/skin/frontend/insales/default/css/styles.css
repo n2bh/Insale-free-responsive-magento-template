@@ -1533,7 +1533,7 @@ margin: 0; }
     position: relative;
 }
 .opc-checkout-page .checkout-header h2 {
-    font-size: 60px;
+    font-size: 50px;
     color: #fff;
     float: right;
 }
@@ -1541,6 +1541,7 @@ margin: 0; }
     font-size: 22px;
     color: #fff;
     float: right;
+    text-align: right;    
 }
 .opc-checkout-page .checkout-header {
     position: absolute;
@@ -3047,7 +3048,9 @@ footer .footer-ribbon {background:#3c3c3c;color:#c4c4c4;font-size:12px;padding:2
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 20px;
+    margin-top: 30px;
     }
+    
 .widget-new-products header h2 span {
     font-weight: 100;
     }

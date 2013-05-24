@@ -1065,7 +1065,7 @@
     .box-up-sell header h2 {
         font-size: 26px;
     }    
-    widget-new-products header h2 {
+    .widget-new-products header h2 {
         font-size: 26px;
     }    
     
@@ -1810,11 +1810,16 @@
         padding: 8px 4px;
         font-size: 10px;
     }    
+    
+    /* Checkout page*/
+    .opc-checkout-page .checkout-header h2 {
+        font-size: 30px;
+        color: #fff;
+        float: right;
+    }
 }
 /*  #Mobile (Portrait)
 ================================================== */
-
-/* Note: Design for a width of 320px Gutter: 10px, Unit: 15px */
 @media only screen and (max-width: 767px) {
     
     /*
@@ -2197,10 +2202,9 @@
     }
     .product-view .product-shop {
         padding: 0;
-        margin-top: 10px;
+        margin-top: 25px;
     }
     .add-to-box {
-        margin-left: 100px;
         margin-bottom: 20px;
     }    
     .product-shop .price-box .special-price {
@@ -2322,6 +2326,9 @@
     
     
     /* Sliders*/
+    .widget-new-products header h2 {
+        margin-top: 0;
+    }    
     .widget-new-products .new-products-block{
         padding: 20px;
     }
