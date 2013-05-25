@@ -88,9 +88,7 @@
         <?php $i=0; foreach ($_productCollection as $_product): ?>
 
             <?php 
-            
                 $today =  time();
-                
                 $_promo_sale='';
                 $specialprice = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialPrice(); 
                 $specialPriceFromDate = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialFromDate();
@@ -106,7 +104,6 @@
                 $_promo_new='';
                 $newFromDate = $_product->getData('news_from_date');
                 $newToDate = $_product->getData('news_to_date');
-//                $newToDateTimestamp = Mage::getModel('core/date')->timestamp(strtotime($_product->getData('news_to_date')));
                 if ($newFromDate):
                     
                     if($today >= strtotime( $newFromDate) && $today <= strtotime($newToDate) 
@@ -144,9 +141,19 @@
                     
                 </div>
                 <div class="product-item-detailed">
+                    <?php 
+                        $_gallery = Mage::getModel('catalog/product')->load($_product->getId())->getMediaGalleryImages();
+                        $_image = null;
+                        if (count($_gallery)) {
+                            foreach ($_gallery as $item)
+                            {
+                                $_image = $item->getFile();
+                            }     
+                        }
+                    ?>
                     <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->getImageLabel($_product, 'small_image') ?>" class="url product-image">
                         <img class="photo fn" 
-                             src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(275,340); ?>" 
+                             src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image',$_image)->resize(275,340); ?>" 
                              alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" 
                              />
                     </a>

@@ -77,9 +77,6 @@ jQuery(function($){
             $(this).children('.product-item').children('.promo-sale').hide();
             $(this).children('.product-item').children('.promo-new').hide();
             
-//            $(this).children('.product-item-detailed').children('.promo-new')
-//                .animate( { opacity: "0.4" }, { queue: false, duration: 1000 });
-                
             $(this).children('.product-item-detailed').show();
             $(this).children('.product-item-detailed').children(".price-box")
                 .animate( { right: "15px" }, { queue: false, duration: 1000 })

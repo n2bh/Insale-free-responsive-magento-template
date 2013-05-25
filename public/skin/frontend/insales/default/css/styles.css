@@ -664,7 +664,7 @@ p.required { font-size:10px; text-align:right; color:#f00; }
 .breadcrumbs-container {
     float: left;
     width: 100%;
-    background: #f4f4f4 url("../images/breadcrumbs.png") 0 6px repeat-x;
+    background: #f4f4f4 url("../images/background-lines.png") 0 6px repeat-x;
     border-bottom: 1px solid #e9e9e9;    
     /*border-top: 1px solid #e9e9e9;*/
 }
@@ -687,7 +687,7 @@ p.required { font-size:10px; text-align:right; color:#f00; }
 .customer-account-forgotpassword .page, 
 .customer-account-login .page, 
 .customer-account-create .page  {
-    background: transparent url(../images/background-1.jpg) 50% 50%;
+    background: transparent url(../images/background-4.jpg) 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -931,7 +931,7 @@ color: #fe5252;
     border: 1px solid #eaeaea;
     font-weight: bold;
     white-space: nowrap;
-    background: #f4f4f4 url("../images/breadcrumbs.png") 0 50% repeat-x
+    background: #f4f4f4 url("../images/background-lines.png") 0 50% repeat-x
 }
 .data-table td { padding:5px; border:1px solid #eaeaea; padding: 15px;}
 .data-table thead {
@@ -1303,7 +1303,7 @@ position: relative;
 }
 
 .website-header .header-bottom .cart .dropdown-content .subtotal {
-    background: #f4f4f4 url("../images/breadcrumbs.png") 0 50% repeat-x;
+    background: #f4f4f4 url("../images/background-lines.png") 0 50% repeat-x;
     padding: 10px;
     margin: 10px 0 0;
     border-top: 1px solid #ddd;
@@ -1414,6 +1414,9 @@ position: relative;
     padding-top: 10px;
     border-bottom: 1px solid #e7e7e7;
     margin-bottom: 10px;
+}
+.mini-products-list li.last.even .product-details {
+    border-bottom: 0;
 }
 
 .mini-products-list .product-details {
@@ -1681,7 +1684,7 @@ width: 100%;
 
 .cart .discount h2,
 .cart .shipping h2 {
-    background: #f4f4f4 url("../images/breadcrumbs.png") 0 0px repeat-x;
+    background: #f4f4f4 url("../images/background-lines.png") 0 0px repeat-x;
     padding: 13px 15px 9px;
     border-bottom: 1px solid #eaeaea;
     -webkit-border-radius: 3px;
@@ -1838,7 +1841,7 @@ margin-bottom: 10px;
 .opc .step-title {
     padding: 16px 15px 14px;
     text-align: right;
-    background: #f4f4f4 url("../images/breadcrumbs.png") 0 9px repeat-x;
+    background: #f4f4f4 url("../images/background-lines.png") 0 9px repeat-x;
     }
     
 .opc .step-title .number {
@@ -2098,9 +2101,8 @@ font-size: 22px;
     margin-left: 75px;
 }
  
-.products-grid .product-item-detailed .product-image {
+.products-grid .item .product-item-detailed .product-image {
 }
-
 .products-grid .product-item-detailed .price-box {
     position: absolute;
     top: 228px;
@@ -3090,6 +3092,21 @@ footer .footer-ribbon {background:#3c3c3c;color:#c4c4c4;font-size:12px;padding:2
     border-radius: 3px;          
 }
 
+.slider-items li .product-item .product-image {
+    position: relative;
+    display: block;
+}
+.slider-items li .product-item .product-image .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 9;
+}
+.slider-items li .product-item .product-image:hover .hover-image {
+    opacity: 1;
+}
+
 
 
 /* crosssell products ================================================================= */
@@ -3161,8 +3178,8 @@ footer .footer-ribbon {background:#3c3c3c;color:#c4c4c4;font-size:12px;padding:2
     margin-right: 10px;
     width: 240px;
 }
-.box-related .item .product-image { float:left; margin-right:-65px; }
-.box-related .item .product-details { margin-left:65px; }
+/*.box-related .item .product-image { float:left; margin-right:-65px; }*/
+/*.box-related .item .product-details { margin-left:65px; }*/
 
 
 .iosSlider-related {
@@ -3303,6 +3320,10 @@ footer .footer-ribbon {background:#3c3c3c;color:#c4c4c4;font-size:12px;padding:2
 .widget-reviews .review-item {
     width: 230px;
     margin-right: 15px;
+    opacity: 0.8;
+}
+.widget-reviews .review-item:hover {
+    opacity: 1;
 }
 
 .widget-reviews .review-item .author-name {
@@ -3364,6 +3385,7 @@ footer .footer-ribbon {background:#3c3c3c;color:#c4c4c4;font-size:12px;padding:2
     position: absolute;
     height: 60px;
     width: 200px;
+    z-index: 1;
 }
 
 .promo-sale {

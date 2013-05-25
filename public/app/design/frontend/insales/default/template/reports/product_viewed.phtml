@@ -32,10 +32,26 @@
                         <?php foreach ($_products as $_product): ?>
                             <li class="item">
                                 <div class="product-item">
-                                        <img class="photo fn" 
-                                             src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(145,180); ?>" 
-                                             alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" 
-                                             />
+                                    <?php 
+                                        $_gallery = Mage::getModel('catalog/product')->load($_product->getId())->getMediaGalleryImages();
+                                        $_image = null;
+                                        if (count($_gallery)) {
+                                            foreach ($_gallery as $item)
+                                            {
+                                                $_image = $item->getFile();
+                                            }     
+                                        }
+                                    ?>                                    
+                                    <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" class="product-image">
+                                        <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(145,180); ?>" 
+                                             alt="<?php echo $this->htmlEscape($_product->getName()) ?>" />
+
+                                        <img class="hover-image" 
+                                             src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image',$_image)->resize(145,180); ?>" 
+                                             alt="<?php echo $this->htmlEscape($_product->getName()) ?>" />
+
+                                    </a>           
+                                        
                                     <h2 class="item fn product-name">
                                         <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_product->getName() ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a>
                                     </h2>
