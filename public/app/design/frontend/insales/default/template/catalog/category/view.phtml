@@ -35,8 +35,26 @@
     $_helper    = $this->helper('catalog/output');
     $_category  = $this->getCurrentCategory();
     $_imgHtml   = '';
+//    if ($_imgUrl = $_category->getImageUrl()) {
+//        $_imgHtml = '<p class="category-image"><img src="'.$_imgUrl.'" alt="'.$this->htmlEscape($_category->getName()).'" title="'.$this->htmlEscape($_category->getName()).'" /></p>';
+//        $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
+//    }
     if ($_imgUrl = $_category->getImageUrl()) {
-        $_imgHtml = '<p class="category-image"><img src="'.$_imgUrl.'" alt="'.$this->htmlEscape($_category->getName()).'" title="'.$this->htmlEscape($_category->getName()).'" /></p>';
+        $_imgHtml = '
+        <style>
+            .breadcrumbs-container {
+                background: transparent url("'.$_imgUrl.'") 50% 50%;
+                height: 155px;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            }
+            .breadcrumbs {
+                display:none;
+            }
+        </style>    
+        ';
         $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
     }
 ?>

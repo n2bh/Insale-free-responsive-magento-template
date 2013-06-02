@@ -125,7 +125,7 @@ jQuery(function($){
         }
     );
         
-    $(".category-image").hover(
+    $(".category-description img").hover(
         function() {
             $(this).animate({opacity: '0.8'}, { queue: false, duration: 500 });
         }, 

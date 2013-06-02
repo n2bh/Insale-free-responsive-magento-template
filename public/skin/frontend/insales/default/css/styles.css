@@ -341,18 +341,18 @@ button.button span:hover {
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;     
-    background: #444 url("../images/elements.png") -236px -262px;
+    background: #444 url("../images/elements.png") -240px -262px;
     text-transform: none;    
     font-size: 10px;
 }    
 .button.to-checkout span span, 
 .button.to-checkout span span:hover  {
-    padding-right: 20px;
+    padding-right: 30px;
     background: transparent;
-    width: 125px;
+    width: 110px;
 } 
 .button.to-checkout span:hover{
-    background: #000 url("../images/elements.png") -236px -262px;
+    background: #000 url("../images/elements.png") -240px -262px;
 }
 
 
@@ -375,13 +375,13 @@ button.button span:hover {
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;    
-}
-
-.products-grid button.btn-cart span.btn-cart-icon:hover {
     -moz-transition: background-color 700ms ease;
     -webkit-transition: background-color 700ms ease;
     -o-transition: background-color 700ms ease;
-    transition: background-color 700ms ease;   
+    transition: background-color 700ms ease;       
+}
+
+.products-grid button.btn-cart span.btn-cart-icon:hover {
     background: #444 url("../images/elements.png") -13px -651px no-repeat;
 }
 
@@ -653,9 +653,9 @@ p.required { font-size:10px; text-align:right; color:#f00; }
     }
     
 .note-msg,
-.notice-msg { border-color:#fcd344; background-color:#fafaec;
-             background-image:url(../images/i_msg-note.gif); 
-             color:#3d6611; }
+.notice-msg { border-color:#fcd344; 
+              background-color:#fafaec;
+             color: #C4A21B; }
 
 
 
@@ -1119,7 +1119,9 @@ tr.tax-details-first td { border-top:1px solid #d2d8db; }
 
 /* Homepage ================================================================================ */
 
-
+.homepage-slider {
+    z-index: 1;
+}
 .homepage-banner-left,
 .homepage-banner-right{
     text-align: justify;
@@ -1147,16 +1149,18 @@ tr.tax-details-first td { border-top:1px solid #d2d8db; }
 
 /* Top */
 .header-wrapper {
-    height: 100px;   
+    height: 97px;   
     width: 100%;    
+    position: relative;
+    z-index: 99;
 }
 .website-header {
     border-top: 0 solid #ff5353;
     z-index: 99;
     width: 100%;
-    height: 97px;
     background: transparent url("../images/header-shadow-bottom.png") 0 100% repeat-x;
     padding-bottom: 5px;
+    height: 97px;
 }
 .website-header-scroll {
     width: 100%;
@@ -1186,12 +1190,9 @@ tr.tax-details-first td { border-top:1px solid #d2d8db; }
     /*height: 50px;*/
 }
 
-/*.website-header .logo-container {
-    display: none;
-}*/
-.website-header .header-container .logo-big{ }
-.website-header .header-container .logo-small{ }
-.website-header .header-container .logo-fixed{ margin-top: 3px;}
+.website-header .header-container .logo-big{ display: none;}
+.website-header .header-container .logo-small{ display: none;}
+.website-header .header-container .logo-fixed{ display: none; margin-top: 3px;}
 .website-header .header-locale {float:left;z-index: 9;}
 .website-header .header-welcome-msg {color:#666666;float:left;margin-top:4px;}
 .website-header .header-welcome-msg .welcome-msg {text-align:center;}
@@ -1199,7 +1200,7 @@ tr.tax-details-first td { border-top:1px solid #d2d8db; }
 .website-header .header-toplinks ul li {background:url("../images/elements.png") -140px -102px no-repeat;padding-left:15px;}
 .website-header .header-top {border-bottom:1px solid #efefef;color:#666666;padding:10px 0;z-index:9;height: 26px; background: #fff;}
 .website-header .header-top a {color:#666666;text-decoration:none;}
-.website-header .header-container .logo {float:right;}
+.website-header .header-container .logo {float:right; }
 .website-header .header-container .navigation {
 }
 
@@ -1254,14 +1255,31 @@ position: relative;
 
 .website-header .header-bottom .cart a:hover { text-decoration: none;}
 .website-header .header-bottom .cart .cart-icon {
-    background: url("../images/elements.png") -43px -47px no-repeat;
-    color: #898989;
+    background: #ff5353 url("../images/elements.png") -458px -47px no-repeat;
     float: left;
-    height: 33px;
-    width: 40px;
-}
-    
-.website-header .header-bottom .cart .cart-icon:hover {background:url("../images/elements.png") -43px -5px no-repeat;}
+    font-size: 13px;
+    height: 32px;
+    line-height: 2.3;
+    text-align: left;
+    text-indent: -9999px;
+    width: 32px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;         
+    -moz-transition: background-color 700ms ease;
+    -webkit-transition: background-color 700ms ease;
+    -o-transition: background-color 700ms ease;
+    transition: background-color 700ms ease;        
+    margin-right: 5px;
+    }
+.website-header .header-bottom .cart .cart-icon:hover {
+    background: #444 url("../images/elements.png") -458px -47px no-repeat;
+    }
+
+
+
+
+
 .website-header .header-bottom .cart .cart-content {
     border-top: 3px solid #fe5252;    
     background:#fff;    
@@ -1337,8 +1355,27 @@ position: relative;
 .website-header .header-bottom .wishlist {float:right;margin-left:5px;margin-right:6px;margin-top:9px;position:relative;}
 .website-header .header-bottom .wishlist .btn-remove { float: right; }
 .website-header .header-bottom .wishlist a:hover { text-decoration: none;}
-.website-header .header-bottom .wishlist .wishlist-icon {background:url("../images/elements.png") -383px -47px no-repeat;float:left;font-size:13px;height:32px;line-height:2.3;text-align:left;text-indent:-9999px;width:32px;}
-.website-header .header-bottom .wishlist .wishlist-icon:hover {background:url("../images/elements.png") -383px -5px no-repeat;}
+.website-header .header-bottom .wishlist .wishlist-icon {
+    background: #ff5353 url("../images/elements.png") -383px -47px no-repeat;
+    float: left;
+    font-size: 13px;
+    height: 32px;
+    line-height: 2.3;
+    text-align: left;
+    text-indent: -9999px;
+    width: 32px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;         
+    -moz-transition: background-color 700ms ease;
+    -webkit-transition: background-color 700ms ease;
+    -o-transition: background-color 700ms ease;
+    transition: background-color 700ms ease;        
+    }
+.website-header .header-bottom .wishlist .wishlist-icon:hover {
+    background: #444 url("../images/elements.png") -383px -47px no-repeat;
+    }
+    
 .website-header .header-bottom .wishlist .wishlist-content {
     border-top: 3px solid #fe5252;
     background: #fff;
@@ -1452,7 +1489,6 @@ position: relative;
     height: 200px;
     width: 100%;
     border-bottom: 3px solid #fe5252;
-    margin-top: -1px;
 }
 
 /********** < Navigation */
@@ -1906,6 +1942,7 @@ font-size: 22px;
     min-height: 330px;
     padding-left: 10px;
     margin-left: -5px;
+    margin-top: -5px;
 }
 .sidebar .block-layered-nav .block-title {
     border: 0;
@@ -2042,8 +2079,8 @@ font-size: 22px;
 
 /* Category Page ========================================================================= */
 .category-title { border:0; margin:0 0 7px; }
-.category-image { width:100%; overflow:hidden; margin:0 0 10px; text-align:center; }
-.category-image img {}
+/*.category-image {  overflow:hidden; margin:0 0 10px; text-align:center; }*/
+.category-description img { width:100%;  margin-bottom: 5px;}
 .category-description { margin:0 0 10px; }
 .category-products {}
 
@@ -2215,7 +2252,7 @@ font-size: 22px;
 /* Rating */
 .no-rating { margin:0; }
 
-.ratings { font-size:11px; line-height:1.25; margin:0; }
+.ratings { font-size:11px; line-height:1.35; margin:0; }
 .ratings strong { float:left; margin:1px 3px 0 0; }
 .ratings .rating-links { margin:0; }
 .ratings .rating-links .separator { margin:0 2px; }
@@ -2949,7 +2986,7 @@ footer .footer-top .footer-newsletter .newsletter-subscribe .input-email button.
     height: 12px;
     text-indent: -99999px;
     white-space: nowrap;
-    padding: 7px;
+    padding: 7px 5px;
 }
 
 footer .footer-top .footer-newsletter .newsletter-subscribe .input-email button.btn-email span span {
@@ -2958,7 +2995,7 @@ footer .footer-top .footer-newsletter .newsletter-subscribe .input-email button.
 
 footer .footer-top .footer-newsletter .newsletter-subscribe .input-email button.btn-email {
     position: absolute;
-    right: 6px;
+    right: 2px;
     top: 8px;
 }
 
@@ -3257,6 +3294,7 @@ footer .footer-ribbon {background:#3c3c3c;color:#c4c4c4;font-size:12px;padding:2
 	
         width: 100%;
         height: 300px;
+        clear: both;
 }
 
 /* Upsell products ================================================================= */
