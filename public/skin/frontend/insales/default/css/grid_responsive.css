@@ -889,7 +889,7 @@
     
     /* Navigation*/
     #nav li a {
-        padding: 14px 15px 9px 2px;
+        padding: 13px 7px 9px 7px;
     }
     
     
@@ -935,9 +935,18 @@
     .products-grid .product-name {
         line-height: 14px;
     }    
-    .products-grid .product-image img {
+    .products-grid .product-item .product-image img {
         width: 206px;
     }
+    
+    .products-grid li .product-item-detailed {
+        left: -35px;
+        top: -50px
+    }
+    .products-grid .product-item-detailed .product-image img {
+        width: 275px;
+    }
+    
     .products-grid .product-item-detailed .price-box {
         top: 145px;    
     }
@@ -968,7 +977,7 @@
 
     .products-grid .product-item-detailed .link-wishlist {
         float: right;
-        padding-left: 2px;
+        padding-left: 5px;
         margin-top: 2px;
     }    
     .products-grid .product-item-detailed .link-compare {
@@ -976,9 +985,9 @@
         margin-top: 2px;
         padding-left: 0px;
     }    
-    .products-grid button.btn-cart span {
+/*    .products-grid button.btn-cart span {
         font-size: 9px;
-    }    
+    }    */
     
     
     /* Product Page*/
@@ -1628,6 +1637,15 @@
         width: 150px;
     }
     
+    .products-grid li .product-item-detailed {
+        left: -32px;
+        top: -50px
+    }
+    .products-grid .product-item-detailed .product-image img {
+        width: 220px;
+    }    
+    
+    
     .products-grid .product-name {
         line-height: 12px;
     }    
@@ -1639,15 +1657,15 @@
         top: 75px;    
     }
     .products-grid li .product-item-detailed .ratings {
-        margin-left: 40px;
+        margin-left: 79px;
     }    
     
-    .products-grid .product-item-detailed .link-wishlist-icon{
+/*    .products-grid .product-item-detailed .link-wishlist-icon{
         display: none;
     }    
     .products-grid .product-item-detailed .link-compare-icon {
         display: none;
-    }        
+    }        */
     
     .products-grid .product-item-detailed .link-wishlist {
         float: right;
@@ -2155,11 +2173,15 @@
         margin-left: 10px;
     }
     .products-grid li.item {
-        width: 160px;
+        width: 166px;
     }    
     .products-grid .product-image img {
-        width: 150px;
+        width: 156px;
     }
+    .products-grid li .product-item-detailed {
+        left: 0;
+        top: 0;
+    }    
     
     .products-grid .product-name {
         line-height: 12px;

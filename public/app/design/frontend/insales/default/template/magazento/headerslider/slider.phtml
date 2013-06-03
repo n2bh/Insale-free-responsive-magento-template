@@ -8,29 +8,26 @@ if ($model->hasItems()) {
     $collection = $model->getItems();
 ?>
 
-            <?php foreach ($collection as $item) { ?>
-                <?php //echo $item['slide_id'] ?>
-            <?php } ?>
+    <section class="slider homepage-slider">
+        <div class="flexslider">
+            <ul class="slides">
+                <?php foreach ($collection as $item) { ?>
+                    <li>
+                        <div class="homepage-slide-container">
+                            <img class="homepage-slide-cover" src="<?php echo Mage::helper('headerslider')->getImageFileHttp().'/'.$item['image_filename'] ?>" />
+                            <div class="homepage-slide-content">
+                                <div class="homepage-slide-content-data">
+                                    <?php echo $processor->filter($item['content']); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </li> 
+                <?php } ?>
+            </ul>
+        </div>
+    </section> 
 
 <?php } ?>
-
-
-
-<section class="slider homepage-slider">
-    <div class="flexslider">
-      <ul class="slides">
-        <li>
-            <img src="http://iosscripts.com/iosslider/_img/h-slider-5.jpg" />
-        </li>
-        <li>
-            <img src="http://iosscripts.com/iosslider/_img/h-slider-5.jpg" />
-        </li>
-        <li>
-            <img src="http://iosscripts.com/iosslider/_img/h-slider-5.jpg" />
-        </li>
-      </ul>
-    </div>
-</section>
 
   
 <script type="text/javascript">
@@ -54,10 +51,10 @@ if ($model->hasItems()) {
 
         // Usability features
         pauseOnAction: true,            //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
-        pauseOnHover: true,            //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
+        pauseOnHover: true,             //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
         useCSS: true,                   //{NEW} Boolean: Slider will use CSS3 transitions if available
         touch: true,                    //{NEW} Boolean: Allow touch swipe navigation of the slider on touch-enabled devices
-        video: false,                   //{NEW} Boolean: If using video in the slider, will prevent CSS3 3D Transforms to avoid graphical glitches
+        video: true,                    //{NEW} Boolean: If using video in the slider, will prevent CSS3 3D Transforms to avoid graphical glitches
 
         // Primary Controls
         controlNav: false,               //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage

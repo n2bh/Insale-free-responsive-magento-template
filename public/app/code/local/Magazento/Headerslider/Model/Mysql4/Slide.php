@@ -33,23 +33,23 @@ class Magazento_Headerslider_Model_Mysql4_Slide extends Mage_Core_Model_Mysql4_A
         return $this;
     }
 
-    protected function _afterSave(Mage_Core_Model_Abstract $object) {
-        $condition = $this->_getWriteAdapter()->quoteInto('slide_id = ?', $object->getId());
-        $this->_getWriteAdapter()->delete($this->getTable('headerslider/slide_category'), $condition);
-        if (!$object->getData('category')) {
-            $object->setData('category', $object->getData('category_id'));
-        }
-        if (in_array(0, $object->getData('category'))) {
-            $object->setData('category', array(0));
-        }
-        foreach ((array) $object->getData('category') as $store) {
-            $storeArray = array();
-            $storeArray['slide_id'] = $object->getId();
-            $storeArray['category_id'] = $store;
-            $this->_getWriteAdapter()->insert($this->getTable('headerslider/slide_category'), $storeArray);
-        }
-        return parent::_afterSave($object);
-    }
+//    protected function _afterSave(Mage_Core_Model_Abstract $object) {
+//        $condition = $this->_getWriteAdapter()->quoteInto('slide_id = ?', $object->getId());
+//        $this->_getWriteAdapter()->delete($this->getTable('headerslider/slide_category'), $condition);
+//        if (!$object->getData('category')) {
+//            $object->setData('category', $object->getData('category_id'));
+//        }
+//        if (in_array(0, $object->getData('category'))) {
+//            $object->setData('category', array(0));
+//        }
+//        foreach ((array) $object->getData('category') as $store) {
+//            $storeArray = array();
+//            $storeArray['slide_id'] = $object->getId();
+//            $storeArray['category_id'] = $store;
+//            $this->_getWriteAdapter()->insert($this->getTable('headerslider/slide_category'), $storeArray);
+//        }
+//        return parent::_afterSave($object);
+//    }
 
 /// -----------------------------
 //
@@ -62,9 +62,9 @@ class Magazento_Headerslider_Model_Mysql4_Slide extends Mage_Core_Model_Mysql4_A
 //	}
 
 
-    protected function _afterLoad(Mage_Core_Model_Abstract $object) {
+//    protected function _afterLoad(Mage_Core_Model_Abstract $object) {
 
-        $select = $this->_getReadAdapter()->select();
+//        $select = $this->_getReadAdapter()->select();
 //                        ->from(array('category' => $this->getTable('headerslider/category')))
 //                        ->joinLeft(array(
 //                            'slide_category' => $this->getTable('headerslider/slide_category')),
@@ -82,12 +82,12 @@ class Magazento_Headerslider_Model_Mysql4_Slide extends Mage_Core_Model_Mysql4_A
 //            $object->setData('name', implode(",", $categoryNameArray));
 //        }
 
-        return parent::_afterLoad($object);
-    }
+//        return parent::_afterLoad($object);
+//    }
 
-    protected function _beforeDelete(Mage_Core_Model_Abstract $object) {
-        $adapter = $this->_getReadAdapter();
-        $adapter->delete($this->getTable('headerslider/slide_category'), 'slide_id=' . $object->getId());
-    }
+//    protected function _beforeDelete(Mage_Core_Model_Abstract $object) {
+//        $adapter = $this->_getReadAdapter();
+//        $adapter->delete($this->getTable('headerslider/slide_category'), 'slide_id=' . $object->getId());
+//    }
 
 }

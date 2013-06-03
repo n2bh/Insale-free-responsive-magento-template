@@ -31,5 +31,12 @@ class Magazento_Headerslider_Helper_Data extends Mage_Core_Helper_Abstract {
         }
         return false;
     }
-
+    
+    public function getImageFileHttp() {
+        return Mage::getBaseUrl('media') . 'magazento_headerslider';
+    }
+    public function getImageFilePath() {
+        return Mage::getBaseDir('media') . DS. 'magazento_headerslider';
+    }    
+    
 }

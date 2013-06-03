@@ -62,11 +62,36 @@ class Magazento_Headerslider_Admin_SlideController extends Mage_Adminhtml_Contro
 
     public function saveAction() {
         if ($data = $this->getRequest()->getPost()) {
-            // init model and set data
-            $model = Mage::getModel('headerslider/slide');
-//            print_r($data);exit();
-            $model->setData($data);
-            // try to save it
+            
+            if (isset($_FILES['image']['name']) && $_FILES['image']['name'] != '') {
+                    try {
+                        $uploader = new Varien_File_Uploader('image');
+                        $uploader->setAllowedExtensions(array('jpg','jpeg','gif','png','bmp'));
+                        $uploader->setAllowRenameFiles(false);
+                        $uploader->setFilesDispersion(false);
+                        $path = Mage::helper('headerslider')->getImageFilePath(); 
+
+                        $ext = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+                        $image_md5_name = md5($_FILES['image']['name']).'.'.$ext;
+                        
+                        $uploader -> save($path, $image_md5_name);
+                        
+                        $data['image_filename'] = $image_md5_name;
+                        
+                    } catch (Exception $e) {
+                        echo $e;
+                        exit();
+                    }
+            } else {       
+                if (isset($data['image']['delete']) && $data['image']['delete'] == 1) {
+                    $data['image_filename'] = '';
+                }
+            }       
+//            var_dump($data);
+//            exit();
+            $model = Mage::getModel('headerslider/slide');            
+            $model->setData($data);                
+            
             try {
                 // save the data
                 $model->save();

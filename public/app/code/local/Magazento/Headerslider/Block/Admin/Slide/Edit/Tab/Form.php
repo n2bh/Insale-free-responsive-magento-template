@@ -32,16 +32,6 @@ class Magazento_Headerslider_Block_Admin_Slide_Edit_Tab_Form extends Mage_Adminh
             ));
         }
 
-        $fieldset->addField('title', 'text', array(
-            'name' => 'title',
-            'label' => Mage::helper('headerslider')->__('Title'),
-            'title' => Mage::helper('headerslider')->__('Title'),
-            'required' => true,
-//            'style' => 'width:200px',
-        ));
-
-
-
         $fieldset->addField('position', 'text', array(
             'name' => 'position',
             'label' => Mage::helper('headerslider')->__('Position'),
@@ -89,6 +79,19 @@ class Magazento_Headerslider_Block_Admin_Slide_Edit_Tab_Form extends Mage_Adminh
             $wysiwygConfig = '';
         }
 
+        $image = '';
+        $path = Mage::helper('headerslider')->getImageFilePath() . DS . $model->getData('image_filename'); 
+        if (is_file($path)) {
+           $image = '<img width="250" height="200" src="'.Mage::helper('headerslider')->getImageFileHttp().'/'.$model->getData('image_filename').'">';
+        }   
+        
+        $fieldset->addField('image', 'image', array(
+          'label'     => Mage::helper('headerslider')->__('Image'),
+          'required'  => true,
+          'name'      => 'image',
+          'note'      => $image,
+        ));  
+        
         $fieldset->addField('content', 'editor', array(
             'name' => 'content',
             'label' => Mage::helper('headerslider')->__('Content'),

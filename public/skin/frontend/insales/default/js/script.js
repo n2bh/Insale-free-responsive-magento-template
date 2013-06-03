@@ -92,14 +92,26 @@ jQuery(function($){
             $(this).children('.product-item').children('.promo-sale').show();
             $(this).children('.product-item').children('.promo-new').show();
             $(this).children('.product-item-detailed').children(".actions")
-             .css( "height", "0" );
+                .css( "height", "0" );
             $(this).children('.product-item-detailed').children(".price-box")
-            .css( "right", "-50px" )
-            .css( "opacity", "0" );
+                .css( "right", "-50px" )
+                .css( "opacity", "0" );
             $(this).children('.product-item-detailed').animate({boxShadow: '0 0 0 #ddd'});
             $(this).children('.product-item-detailed').hide();            
+            
         }
     );
+        
+        
+    /* Slider Items */    
+//    $(".slider-items .item").hover(
+//        function() {
+//            $(this).children('.product-item').animate({boxShadow: '0 0 10px #ddd'});
+//        }, 
+//        function() {
+//            $(this).children('.product-item').animate({boxShadow: '0 0 6 #ddd'});
+//        }
+//    );
         
     /* Header search */    
     $(".search-container #search").hover(
@@ -186,6 +198,15 @@ jQuery(function($){
         keyboardControls: true,
         navNextSelector: $('.widget-new-products .scroll-left'),
         navPrevSelector: $('.widget-new-products .scroll-right')        
+    });    
+    /* Sale Products */    
+    $('.iosSlider-saleproducts').iosSlider({
+        responsiveSlideWidth: true,
+        desktopClickDrag: true,
+        responsiveSlides: true,
+        keyboardControls: true,
+        navNextSelector: $('.widget-sale-products .scroll-left'),
+        navPrevSelector: $('.widget-sale-products .scroll-right')        
     });    
     /* Reviews */   
     $('.iosSlider-reviews').iosSlider({

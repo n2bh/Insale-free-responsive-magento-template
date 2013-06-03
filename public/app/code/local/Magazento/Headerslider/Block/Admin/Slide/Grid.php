@@ -37,12 +37,14 @@ class Magazento_Headerslider_Block_Admin_Slide_Grid extends Mage_Adminhtml_Block
             'index' => 'position',
             'width' => '30px',
         ));
-        $this->addColumn('title', array(
-            'header' => Mage::helper('headerslider')->__('Title'),
+        
+        $this->addColumn('media', array(
+            'header' => Mage::helper('headerslider')->__('Image'),
             'align' => 'left',
-            'index' => 'title',
+            'index' => 'media',
+            'width' => '200px',            
+            'renderer'  => 'headerslider/admin_slide_grid_renderer_media'            
         ));
-
 
         $this->addColumn('is_active', array(
             'header' => Mage::helper('headerslider')->__('Status'),

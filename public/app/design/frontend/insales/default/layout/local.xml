@@ -35,8 +35,6 @@
             <!--<action method="addItem"><type>skin_js</type><name>js/easing.js</name><params/></action>-->   
             
             <action method="addItem"><type>skin_js</type><name>js/jquery.animate-shadow-min.js</name><params/></action>   
-            <action method="addItem"><type>skin_js</type><name>js/jquery.isotope.min.js</name><params/></action>   
-            
                                     
             <action method="addItem"><type>skin_js</type><name>js/script.js</name><params/></action>   
 
