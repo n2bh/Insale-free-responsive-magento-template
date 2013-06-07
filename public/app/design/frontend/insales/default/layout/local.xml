@@ -30,19 +30,15 @@
             <action method="addItem"><type>skin_js</type><name>js/jquery.elevateZoom-2.5.5.min.js</name><params/></action>   
             <action method="addItem"><type>skin_js</type><name>js/jquery.fancybox.pack.js</name><params/></action>   
             <action method="addCss"><stylesheet>css/jquery.fancybox.css</stylesheet><params/></action>    
-                        
-            <action method="addItem"><type>skin_js</type><name>js/jquery.ui.totop.min.js</name><params/></action>   
-            <!--<action method="addItem"><type>skin_js</type><name>js/easing.js</name><params/></action>-->   
-            
-            <action method="addItem"><type>skin_js</type><name>js/jquery.animate-shadow-min.js</name><params/></action>   
-                                    
-            <action method="addItem"><type>skin_js</type><name>js/script.js</name><params/></action>   
-
-            
             <action method="addCss"><stylesheet>css/grid_responsive.css</stylesheet><params/></action>
+            <action method="addCss"><stylesheet>css/flexslider.css</stylesheet><params/></action>       
+            
+            <action method="addItem"><type>skin_js</type><name>js/jquery.ui.totop.min.js</name><params/></action>   
+            <action method="addItem"><type>skin_js</type><name>js/jquery.animate-shadow-min.js</name><params/></action>   
             <action method="addItem"><type>skin_js</type><name>js/jquery.flexslider-min.js</name><params/></action>               
-            <action method="addCss"><stylesheet>css/flexslider.css</stylesheet><params/></action>           
-       
+            <action method="addItem"><type>skin_js</type><name>js/script.js</name><params/></action>   
+            
+            <action method="addItem"><type>skin_js</type><name>magazento_ajaxcart/jquery.ajaxcart.js</name></action>            
         </reference>
     </default>
 

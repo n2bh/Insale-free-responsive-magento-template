@@ -65,7 +65,7 @@ html[xmlns] .slides {display: block;}
 
 
 /* Direction Nav */
-.flex-direction-nav {*height: 0;}
+.flex-direction-nav {height: 0;}
 .flex-direction-nav a {
 width: 60px;
 height: 60px;
@@ -101,6 +101,8 @@ opacity: 0;
 .flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
 
 @media screen and (max-width: 860px) {
-  .flex-direction-nav .flex-prev {opacity: 1; left: 0;}
-  .flex-direction-nav .flex-next {opacity: 1; right: 0;}
+/*  .flex-direction-nav .flex-prev {opacity: 1; left: 0;}
+  .flex-direction-nav .flex-next {opacity: 1; right: 0;}*/
+    .flexslider:hover .flex-next {opacity: 0.6; right: 100px;}
+    .flexslider:hover .flex-prev {opacity: 0.6; left: 100px;}      
 }

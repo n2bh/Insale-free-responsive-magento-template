@@ -10,7 +10,7 @@
         <reference name="head">
             <action method="addItem">
                 <type>skin_css</type>
-                <name>ip_ajaxnavigation/ajaxnavigation_jquery.css</name>
+                <name>ip_ajaxnavigation/ajaxnavigation.css</name>
             </action>
             <action method="addItem">
                 <type>skin_css</type>
@@ -35,7 +35,7 @@
             </action>               
             <action method="addItem">
                 <type>skin_js</type>
-                <name>ip_ajaxnavigation/ajaxnavigation_jquery.js</name>
+                <name>ip_ajaxnavigation/jquery.ajaxnavigation.js</name>
             </action>               
         </reference>
         

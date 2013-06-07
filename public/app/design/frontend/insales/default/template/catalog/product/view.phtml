@@ -113,44 +113,55 @@
                         <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
                     <?php endif;?>
                     
-                    <div class="add-to-box">
-                        <?php if (!$this->hasOptions()):?>
+                    
+                    <?php if (!$this->hasOptions()):?>
+                    
+                        <div class="add-to-box">
+                            <?php if (!$this->hasOptions()):?>
 
-                                <?php if($_product->isSaleable()): ?>
-                                    <?php echo $this->getChildHtml('addtocart') ?>
-                                <?php endif; ?>
+                                    <?php if($_product->isSaleable()): ?>
+                                        <?php echo $this->getChildHtml('addtocart') ?>
+                                    <?php endif; ?>
+                                    <br class="clear">
+                                    <?php echo $this->getChildHtml('addto') ?>
+
+                            <?php else:?>
                                 <br class="clear">
                                 <?php echo $this->getChildHtml('addto') ?>
-
-                        <?php else:?>
-                            <br class="clear">
-                            <?php echo $this->getChildHtml('addto') ?>
-                        <?php endif; ?>
-                        <?php if ($this->canEmailToFriend()): ?>
-                            <a class="email-friend" href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><span class="email-friend-icon"></span><?php echo $this->__('Email to a Friend') ?></a>
-                        <?php endif; ?>  
-                    </div>
+                            <?php endif; ?>
+                            <?php if ($this->canEmailToFriend()): ?>
+                                <a class="email-friend" href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><span class="email-friend-icon"></span><?php echo $this->__('Email to a Friend') ?></a>
+                            <?php endif; ?>  
+                        </div>
+                    
+                    <?php else:?>
+                    
+                        <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+                        <?php endif;?>                      
+                    
+                    <?php endif;?>      
+                    
+                    
                 </div>        
 
             </div>        
             <div class="grid_4 omega">
                 <div class="product-sidebar">
+                    
                     <div class="social-buttons">
                         <div class="social-twitter">
                             <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>                
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>        
                         </div>
                         <div class="social-facebook">
                             <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
                         </div>
                         <div class="social-pinterest">
-                            <a href="//pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&media=http%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=Next%20stop%3A%20Pinterest" 
-                               data-pin-do="buttonPin" 
-                               data-pin-config="beside">
-                                <img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" />
-                            </a>
+                            <a href="//pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" ><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>        
                         </div>
-                    </div>
+                    </div>     
+                    
                     <?php echo $this->getChildHtml('related_products') ?>                
                     <?php echo $this->getChildHtml('product.info1') ?>
                     <?php echo $this->getChildHtml('product.info2') ?>
@@ -158,9 +169,6 @@
             </div>        
 
             <div class="clearer"></div>
-            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
-            <?php endif;?>
         </form>
         <script type="text/javascript">
         //<![CDATA[

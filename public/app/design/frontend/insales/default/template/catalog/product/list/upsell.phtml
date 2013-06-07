@@ -95,6 +95,8 @@
                                         <img class="hover-image" src="<?php echo $this->helper('catalog/image')->init($_link, 'small_image',$_image)->resize(260,320) ?>" 
                                              alt="<?php echo $this->htmlEscape($_link->getName()) ?>" />                                        
                                     </a>
+                                    <a href="#" onclick="setLocation('<?php echo $this->getAddToCartUrl($_link) ?>');" class="btn-cart btn-cart-icon">#</a>
+
                                     <div class="promo-container">
                                         <?php echo $_promo_sale; ?>
                                         <?php echo $_promo_new; ?>                        

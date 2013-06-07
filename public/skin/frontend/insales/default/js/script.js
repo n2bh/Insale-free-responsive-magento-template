@@ -1,5 +1,4 @@
 jQuery.noConflict();
-
 jQuery(function($){
     
     $('.logo-small').hide();
@@ -21,7 +20,6 @@ jQuery(function($){
         if (!$('.logo-fixed').is(":visible")) {
            logoImageSwatch(); 
         }
-        
     }); 
     
     
@@ -47,71 +45,99 @@ jQuery(function($){
         }
     });
         
-    var config = {
-        over: function(){
-            if ($(this).hasClass('.dropdown-container')){
-                $(this).parent().addClass('over');
-            } else {
-                $(this).addClass('over');
-            }
-            $('.dropdown-content', this).animate({opacity:1, height:'toggle'}, 200);
-        },
-        timeout: 0, // number = milliseconds delay before onMouseOut
-        out: function(){
-            var that = this;
-            $('.dropdown-content', this).animate({opacity:0, height:'toggle'}, 200, function(){
+ 
+    $.fn.pageEffects = function () {
+        
+        /* Drop-downs */        
+        var config = {
+            over: function(){
                 if ($(this).hasClass('.dropdown-container')){
-                    $(that).parent().removeClass('over');
+                    $(this).parent().addClass('over');
                 } else {
-                    $(that).removeClass('over');
+                    $(this).addClass('over');
                 }
-            });
-        }
-    };
-    $('.dropdown-container').hoverIntent( config );
+                $('.dropdown-content', this).animate({opacity:1, height:'toggle'}, 200);
+            },
+            timeout: 0, // number = milliseconds delay before onMouseOut
+            out: function(){
+                var that = this;
+                $('.dropdown-content', this).animate({opacity:0, height:'toggle'}, 200, function(){
+                    if ($(this).hasClass('.dropdown-container')){
+                        $(that).parent().removeClass('over');
+                    } else {
+                        $(that).removeClass('over');
+                    }
+                });
+            }
+        };
+        $('.dropdown-container').hoverIntent( config );
     
-    /* Product Items */    
-    $(".products-grid .item").hover(
+        /* Product Grid */
+        $(".products-grid .item").hover(
+            function() {
+                $(this).removeClass("shadow");
+                $(this).children('.product-item').children('.promo-sale').hide();
+                $(this).children('.product-item').children('.promo-new').hide();
+
+                $(this).children('.product-item-detailed').show();
+                $(this).children('.product-item-detailed').children(".price-box")
+                    .animate( { right: "15px" }, { queue: false, duration: 1000 })
+                    .animate( { opacity: "1" }, { queue: false, duration: 1000 });
+
+                $(this).children('.product-item-detailed').animate({boxShadow: '0 0 22px #ddd'});
+                $(this).children('.product-item-detailed').children(".actions")
+                    .animate({height: '30px'}, { queue: false, duration: 300 });
+
+            }, 
+            function() {
+                $(this).addClass("shadow");
+                $(this).children('.product-item').children('.promo-sale').show();
+                $(this).children('.product-item').children('.promo-new').show();
+                $(this).children('.product-item-detailed').children(".actions")
+                    .css( "height", "0" );
+                $(this).children('.product-item-detailed').children(".price-box")
+                    .css( "right", "-50px" )
+                    .css( "opacity", "0" );
+                $(this).children('.product-item-detailed').animate({boxShadow: '0 0 0 #ddd'});
+                $(this).children('.product-item-detailed').hide();            
+
+            }
+        );
+    };
+    
+    $().pageEffects();
+    // FIX LAYERED NAVIGATIOn
+    jQuery(document).ajaxComplete(function() {
+        $().pageEffects();
+     });         
+        
+    /* Product Grid */    
+    $(".products-list .item").hover(
         function() {
-            $(this).removeClass("shadow");
-            $(this).children('.product-item').children('.promo-sale').hide();
-            $(this).children('.product-item').children('.promo-new').hide();
+            $(this).animate({boxShadow: '0 0 22px #ddd'});
+        }, 
+        function() {
+            $(this).animate({boxShadow: '0 0 6px #ddd'});            
+        }
+    );
+        
+    /* Widgets */    
+    $(".slider-items .product-item").hover(
+        function() {
             
-            $(this).children('.product-item-detailed').show();
-            $(this).children('.product-item-detailed').children(".price-box")
-                .animate( { right: "15px" }, { queue: false, duration: 1000 })
-                .animate( { opacity: "1" }, { queue: false, duration: 1000 });
-                
-            $(this).children('.product-item-detailed').animate({boxShadow: '0 0 22px #ddd'});
-            $(this).children('.product-item-detailed').children(".actions")
-                .animate({height: '30px'}, { queue: false, duration: 300 });
+            $(this).children(".btn-cart")
+                .animate( { left: "10px" }, { queue: false, duration: 300 })
+                .animate( { opacity: "1" }, { queue: false, duration: 300 });
                 
         }, 
         function() {
-            $(this).addClass("shadow");
-            $(this).children('.product-item').children('.promo-sale').show();
-            $(this).children('.product-item').children('.promo-new').show();
-            $(this).children('.product-item-detailed').children(".actions")
-                .css( "height", "0" );
-            $(this).children('.product-item-detailed').children(".price-box")
-                .css( "right", "-50px" )
+            $(this).children(".btn-cart")
+                .css( "left", "-50px" )
                 .css( "opacity", "0" );
-            $(this).children('.product-item-detailed').animate({boxShadow: '0 0 0 #ddd'});
-            $(this).children('.product-item-detailed').hide();            
             
         }
     );
         
-        
-    /* Slider Items */    
-//    $(".slider-items .item").hover(
-//        function() {
-//            $(this).children('.product-item').animate({boxShadow: '0 0 10px #ddd'});
-//        }, 
-//        function() {
-//            $(this).children('.product-item').animate({boxShadow: '0 0 6 #ddd'});
-//        }
-//    );
         
     /* Header search */    
     $(".search-container #search").hover(
@@ -290,17 +316,5 @@ jQuery(function($){
     if ($(window).width() >= 767 ) {    
         $().UItoTop({ easingType: 'easeOutQuart' });
     }
-        
-	
+
 });
-
-
-
-    
-//    $(window).load(function () {
-//        $('.logo-container').animate({
-//                opacity: 'toggle'
-//            },300
-//        );
-//    });        
-         

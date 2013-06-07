@@ -94,6 +94,9 @@
                                      alt="<?php echo $this->htmlEscape($_item->getName()) ?>" />
                             
                             </a>
+                            
+                            <a href="#" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>');" class="btn-cart btn-cart-icon">#</a>
+                            
                             <div class="promo-container">
                                 <?php echo $_promo_sale; ?>
                                 <?php echo $_promo_new; ?>                        

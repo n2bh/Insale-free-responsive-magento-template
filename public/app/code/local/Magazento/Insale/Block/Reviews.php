@@ -33,6 +33,7 @@ class Magazento_Insale_Block_Reviews extends Mage_Core_Block_Template implements
                 ->order('rand()');
         $review->appendSummary($collection);
         
+//        var_dump($collection->getSize());exit();
         $counter = 0;
         $review_array = array();
         foreach($collection as $_item) {
@@ -42,6 +43,7 @@ class Magazento_Insale_Block_Reviews extends Mage_Core_Block_Template implements
             }
             if ($counter == $this->getReviewsAmount()) break;
         }
+
         
         return $review_array;
     }

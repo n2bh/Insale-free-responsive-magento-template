@@ -853,6 +853,9 @@
     .homepage-banner-center img{
         width: 100%;
     }
+    .homepage-slide-content-data {
+        padding: 65px;
+    }
     /* Header */
     
     .website-header.default .logo img {
@@ -985,6 +988,7 @@
         margin-top: 2px;
         padding-left: 0px;
     }    
+    
 /*    .products-grid button.btn-cart span {
         font-size: 9px;
     }    */
@@ -1001,6 +1005,10 @@
     .product-shop .price-box .special-price {
         font-size: 14px;
     }
+    .product-view .product-img-box .more-views li .zoom-small-image img{
+        width: 85px;
+    }
+        
 /*    .product-shop .price-box .old-price {
     font-size: 12px;
     }    */
@@ -1542,6 +1550,9 @@
     .homepage-banner-center img{
         width: 100%;
     }
+    .homepage-slide-content-data {
+        padding: 25px;
+    }    
     /* Header */
     
     .website-header.default .logo img {
@@ -1682,6 +1693,12 @@
     }
     
     
+    .products-list .product-name {
+        margin-top: 25px;
+        text-align: center;
+        font-size: 12px;
+        }    
+        
     /* Product Page*/
     
     #tabs ul li.product-tab a {
@@ -1980,7 +1997,10 @@
         line-height: 1.2em;
         font-size: 10px;
     }
-    
+
+    .homepage-slide-content {
+        display: none;
+    }
     /* Header */
     
     .header-wrapper {
@@ -2087,7 +2107,7 @@
     
     .website-header .header-bottom nav {
         clear: both;
-        width: 300px;
+        width: 400px;
         margin: 0 auto;
         float: none;
         display: block;
@@ -2217,6 +2237,23 @@
     .products-grid button.btn-cart span {
         font-size: 10px;
     }    
+    
+    .products-list .product-image img {
+        width: 100px;
+    }    
+    .products-list li.item .product-actons {
+        width: 50px;
+        margin-left: 10px;
+    }    
+    .products-list li.item .product-actons .note {
+        display: none;
+    }        
+    .products-list .product-name {
+        font-size: 12px;
+    }    
+    
+    /* Product Page*/
+    
     .product-view .box-tags .form-add .input-box {
         float: left;
         width: 200px;
@@ -2225,9 +2262,7 @@
     }    
     .product-view .box-tags .form-add input.input-text {
         width: 154px;
-    }
-    
-    /* Product Page*/
+    }    
     #tabs ul li.product-tab a {
         padding: 15px 8px;
     }

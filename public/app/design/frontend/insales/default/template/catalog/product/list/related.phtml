@@ -65,6 +65,7 @@
                                      />
                             
                             </a>
+                            <a href="#" onclick="setLocation('<?php echo $this->getAddToCartUrl($_item) ?>');" class="btn-cart btn-cart-icon">#</a>
 
                             <h2 class="product-name">
                                 <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $_item->getName() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a>
