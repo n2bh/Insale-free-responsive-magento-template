@@ -103,6 +103,16 @@ jQuery(function($){
 
             }
         );
+            
+        /* Product List */    
+        $(".products-list .item").hover(
+            function() {
+                $(this).animate({boxShadow: '0 0 22px #ddd'});
+            }, 
+            function() {
+                $(this).animate({boxShadow: '0 0 6px #ddd'});            
+            }
+        );            
     };
     
     $().pageEffects();
@@ -111,15 +121,6 @@ jQuery(function($){
         $().pageEffects();
      });         
         
-    /* Product Grid */    
-    $(".products-list .item").hover(
-        function() {
-            $(this).animate({boxShadow: '0 0 22px #ddd'});
-        }, 
-        function() {
-            $(this).animate({boxShadow: '0 0 6px #ddd'});            
-        }
-    );
         
     /* Widgets */    
     $(".slider-items .product-item").hover(

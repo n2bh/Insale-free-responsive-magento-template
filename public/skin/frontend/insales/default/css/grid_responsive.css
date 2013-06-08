@@ -864,7 +864,7 @@
     
     /* Locale */
     .website-header .form-language {
-        margin-left: 5px;
+        margin-left: 0px;
     }    
     .website-header .form-language span {
         padding: 3px;
@@ -886,8 +886,9 @@
     }    
 
     .website-header .header-toplinks ul li {
-        background: url("../images/elements.png") -146px -104px no-repeat;
+        background: url("../images/elements.png") -146px -98px no-repeat;
         padding-left: 5px;
+        margin-left: 3px;
     }    
     
     /* Navigation*/
@@ -1016,6 +1017,9 @@
     .product-shop-data .availability.in-stock {
         font-size: 11px;
         width: 40%;
+    }    
+    .product-shop button.button span {
+        padding: 15px 0px;
     }    
     .tabs-banner-sidebar img {
         width: 212px;
@@ -1591,9 +1595,10 @@
     }    
 
     .website-header .header-toplinks ul li {
-        background: url("../images/elements.png") -146px -104px no-repeat;
-        padding-left: 5px;
-    }    
+        background: url("../images/elements.png") -146px -99px no-repeat;
+        padding-left: 10px;
+        margin-left: 9px;
+    }
     
     .website-header .header-bottom .cart .cart-counter {
         display: none;
@@ -1604,9 +1609,14 @@
     .website-header .header-bottom .cart .dropdown-content .content-triangle {
         right: 28px;
     }    
+    
+    .website-header .navigation .topsearch .search-container #search {
+        width: 130px;
+    }    
+    
     /* Navigation*/
     #nav li a {
-        padding: 14px 7px 9px 2px;
+        padding: 14px 2px 9px 2px;
     }
     
     
@@ -2061,6 +2071,7 @@
         float: none;
         text-align: center;
         padding-top: 5px;
+        height: 20px;
     }    
 
     .website-header .form-language {
@@ -2086,8 +2097,9 @@
         display: none;
     }        
     .website-header .header-toplinks ul li {
-        background: url("../images/elements.png") -146px -104px no-repeat;
-        padding-left: 5px;
+        background: url("../images/elements.png") -146px -99px no-repeat;
+        padding-left: 10px;
+        margin-left: 9px;
     }    
     
     .website-header .header-bottom .cart .cart-counter {
