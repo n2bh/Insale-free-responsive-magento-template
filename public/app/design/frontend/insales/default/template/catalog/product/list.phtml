@@ -35,7 +35,18 @@
 <?php $_currency =  Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol(); ?>
 <?php $_productCollection=$this->getLoadedProductCollection() ?>
 <?php if(!$_productCollection->count()): ?>
-<p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
+<div class="no-products-container">
+    <span class="big-shopping-cart"></span>
+    <p class="no-products"><?php echo $this->__('There are no products matching the selection.') ?></p>
+    
+    <?php $_block = Mage::getModel('cms/block')->load('no_products_category') ?>  
+    <br class="clear">
+    <h2 class="no-product-block-title"><?php echo $_block->getTitle(); ?></h2>
+    <div class="no-product-block-content">
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('no_products_category')->toHtml();?>
+    </div>
+
+</div>
 <?php else: ?>
 <div class="category-products">
     <?php echo $this->getToolbarHtml() ?>

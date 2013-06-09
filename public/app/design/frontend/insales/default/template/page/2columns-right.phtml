@@ -22,22 +22,22 @@
             <?php echo $this->getChildHtml('global_notices') ?>
             <div class="page">
                 <?php echo $this->getChildHtml('header') ?>
-                <div class="header-image">
-                </div>                
+                        <?php echo $this->getChildHtml('breadcrumbs') ?>                
                 <div class="main-container col2-right-layout container_16">
-                    <div class="main">
-                        <?php echo $this->getChildHtml('breadcrumbs') ?>
-                        <article class="grid_12">
-                            <div class="col-main">
-                                <?php echo $this->getChildHtml('global_messages') ?>
-                                <?php echo $this->getChildHtml('content') ?>
-                            </div>
-                        </article>
-                        <aside class="grid_4">
-                            <div class="col-right sidebar">
-                                <?php echo $this->getChildHtml('right') ?>
-                            </div>
-                        </aside>
+                    <div class="grid_16">                      
+                        <div class="main">
+                            <article class="grid_12 alpha">
+                                <div class="col-main">
+                                    <?php echo $this->getChildHtml('global_messages') ?>
+                                    <?php echo $this->getChildHtml('content') ?>
+                                </div>
+                            </article>
+                            <aside class="grid_4 omega">
+                                <div class="col-right sidebar">
+                                    <?php echo $this->getChildHtml('right') ?>
+                                </div>
+                            </aside>
+                        </div>
                     </div>
                 </div>
                 <?php echo $this->getChildHtml('footer') ?>
