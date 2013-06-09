@@ -3725,3 +3725,18 @@ footer .footer-ribbon {background:#3c3c3c;color:#c4c4c4;font-size:12px;padding:2
     padding-bottom: 5px;
     margin-top: 20px;
     }
+
+.page404 .big-shopping-cart {
+    margin: 0 auto;
+    margin-top: 20px;
+    float: none;
+    clear: none;
+}
+.page404 .no-products  {
+    margin-top: 20px;
+    clear: none;
+}    
+.page404 .no-product-block-content {
+    max-width: 600px;
+    margin: 0 auto;
+} 

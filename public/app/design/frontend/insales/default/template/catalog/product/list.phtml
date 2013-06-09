@@ -37,7 +37,10 @@
 <?php if(!$_productCollection->count()): ?>
 <div class="no-products-container">
     <span class="big-shopping-cart"></span>
-    <p class="no-products"><?php echo $this->__('There are no products matching the selection.') ?></p>
+    <p class="no-products">
+        <?php echo $this->__('There are no products matching the selection.') ?>
+        <button type="button"  class="button" onclick="window.history.back();"><span><span><?php echo $this->__('Return to Previous page') ?></span></span></button>
+    </p>
     
     <?php $_block = Mage::getModel('cms/block')->load('no_products_category') ?>  
     <br class="clear">
