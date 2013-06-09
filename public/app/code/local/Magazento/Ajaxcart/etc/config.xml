@@ -10,6 +10,11 @@
         </Magazento_Ajaxcart>
     </modules>
     <global>
+        <blocks>
+            <ajaxcart>
+                <class>Magazento_Ajaxcart_Block</class>
+            </ajaxcart>
+        </blocks>        
         <helpers>
             <ajaxcart>
                 <class>Magazento_Ajaxcart_Helper</class>
@@ -60,7 +65,14 @@
             </resources>
         </acl>
     </adminhtml>
-
+<!--    
+    <default>
+        <ajaxcart>
+            <general>
+                <enabled>1</enabled>
+            </general>
+        </ajaxcart>
+    </default>-->
 
 </config>
 

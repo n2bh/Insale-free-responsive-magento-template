@@ -19,9 +19,9 @@
                         <div class="logo-container">
                             <a href="<?php echo $this->getUrl('') ?>" 
                                title="<?php echo $this->getLogoAlt() ?>" class="logo">
-                                <img class="logotype logo-big"   src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" />
-                                <img class="logotype logo-small" src="<?php echo $this->getSkinUrl('images/logo-small.png') ?>" alt="<?php echo $this->getLogoAlt() ?>" />
-                                <img class="logo-fixed" src="<?php echo $this->getSkinUrl('images/logo-mini.png') ?>" alt="<?php echo $this->getLogoAlt() ?>" />
+                                <img class="logotype logo-big"   src="<?php echo Mage::getBaseUrl('media') .'/magazento_insale/'. Mage::getStoreConfig('insale/general/logo');?>" alt="<?php echo $this->getLogoAlt() ?>" />
+                                <img class="logotype logo-small" src="<?php echo Mage::getBaseUrl('media') .'/magazento_insale/'. Mage::getStoreConfig('insale/general/logo_small');?>" alt="<?php echo $this->getLogoAlt() ?>" />
+                                <img class="logo-fixed" src="<?php echo Mage::getBaseUrl('media') .'/magazento_insale/'. Mage::getStoreConfig('insale/general/logo_mini');?>" alt="<?php echo $this->getLogoAlt() ?>" />
                             </a>
                         </div>    
                     </div>    

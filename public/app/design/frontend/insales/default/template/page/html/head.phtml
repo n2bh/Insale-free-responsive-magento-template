@@ -29,6 +29,7 @@
 <meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
 <meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
 <meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
 <link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
 <!--[if lt IE 7]>
@@ -71,4 +72,118 @@
 
 <!--Google Fonts-->
 
-<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=<?php echo Mage::getStoreConfig('insale/general/googlefonts');?>:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+<?php 
+$css_color1 = Mage::getStoreConfig('insale/general/color1');
+$css_color2 = Mage::getStoreConfig('insale/general/color2');
+$css_color3 = Mage::getStoreConfig('insale/general/color3');
+?>
+<style type="text/css">
+    body { font:12px/1.55 '<?php echo Mage::getStoreConfig('insale/general/googlefonts');?>'}
+
+    
+    /* FIRST COLOR*/
+    #toTop,
+    .actions button.btn-cart span.btn-cart-icon,
+    .account-login .page-title .page-icon, 
+    .account-create .page-title .page-icon,
+    
+    .i-pager,
+    .link-wishlist-icon,
+    .link-compare-icon,
+    .email-friend-icon,
+    .btn-remove,
+    .website-header-scroll,
+    .website-header .header-bottom  .dropdown-content .content-triangle,
+    .products-grid .product-item-detailed .link-wishlist-icon,
+    .products-grid .product-item-detailed .link-compare-icon,
+    .product-view .product-sidebar .product-info-shipping,
+    .product-view .product-sidebar .product-info-rewards,
+    .promo-banner .promo-icon-one,
+    .promo-banner .promo-icon-two,
+    .promo-banner .promo-icon-three,
+    
+    .website-header .header-bottom .wishlist .wishlist-icon,
+    .website-header .header-bottom .cart .cart-icon,
+    .website-header.default .header-container  .logo-container,
+    
+    .slider-items .btn-cart-icon,
+    .sidebar .sidebar-triangle,
+    
+    .ajaxcart-checkout-link,
+    .ajaxcart-continue-link,
+    
+    footer .footer-top .footer-newsletter .newsletter-subscribe .newsletter-icon
+    {
+        background-color: <?php echo $css_color1; ?>; 
+        /*background-color: #fe5252;*/ 
+    }
+    
+    .customer-account-forgotpassword .main-container .account-forgotpassword,
+    .customer-account-create .main-container .account-create,
+    .customer-account-login .main-container .account-login,
+    .data-table thead,
+    .website-header .header-bottom .cart .cart-content,
+    .website-header .header-bottom .wishlist .wishlist-content,
+    .checkout-cart-index .header-image,
+    .checkout-onepage-index .header-image,
+    .cart .totals,
+    .opc .active .step-title,
+    #tabs .product-tab.active,
+    
+    .ajaxcart-result, 
+    .ajaxcart-loading
+    {
+        border-color: <?php echo $css_color1; ?>; 
+        /*border-color: #fe5252;*/
+    }   
+    
+    .form-list label.required em,
+    .toolbar .pager .pages .current,
+    .website-header .header-bottom .cart .dropdown-content .subtotal-sum,
+    .mini-products-list .product-sku span,
+    .mini-products-list .product-qty span,
+    .website-header .form-currency .current,
+    .website-header .form-language .current,
+    #nav li a:hover,
+    #nav li.over a,
+    #nav li.active a,
+    #nav ul li a:hover,
+    #nav ul li.active > a,
+    #nav ul li.over > a,    
+    #nav ul li.over > a,    
+    .breadcrumbs .breadcrumbs-last
+    {
+        color: <?php echo $css_color1; ?>; 
+        /*color: #fe5252;*/
+    }    
+    
+    /* SECOND COLOR*/
+    button.button span,
+    .button.view-cart span,
+    .navigation-buttons button.scroll-left span
+    {
+        background: <?php echo $css_color2; ?>; 
+        /*background: #fe6b6b;*/
+    }
+    .special-price,
+    .price-box,
+    .view-more-link {
+        color: <?php echo $css_color2; ?>; 
+        /*color: #fe6b6b;*/
+    }
+    
+    
+    /* THIRD COLOR*/
+    .product-shop button.button span,
+    .cart .btn-proceed-checkout span,
+    .buttons-set button.button span,
+    .products-grid .product-item-detailed .price-box {
+        background-color: <?php echo $css_color3; ?>; 
+        /*background: #f12712;*/
+    }
+    
+    
+    
+</style>

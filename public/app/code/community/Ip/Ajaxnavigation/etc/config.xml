@@ -99,12 +99,12 @@
         </translate>
     </frontend>
 
-    <default>
+<!--    <default>
         <ajaxnavigation>
             <general>
                 <jquery>1</jquery>
             </general>
         </ajaxnavigation>
-    </default>
+    </default>-->
 
 </config>

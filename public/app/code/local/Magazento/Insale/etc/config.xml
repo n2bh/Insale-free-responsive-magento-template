@@ -34,4 +34,41 @@
             </insale>   
         </models>        
     </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <insale>
+                                            <title>Magazento_Insale</title>
+                                        </insale>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>   
+    
+    <default>
+        <insale>
+            <general>
+                <ajaxcart_enabled>1</ajaxcart_enabled>
+                <logo>logo.png</logo>                        
+                <logo_small>logo-small.png</logo_small>                        
+                <logo_mini>logo-mini.png</logo_mini>                
+                <googlefonts>PT Sans</googlefonts>                
+                <color1>#fe5252</color1>                
+                <color2>#fe6b6b</color2>                
+                <color3>#f12712</color3>                
+            </general>
+        </insale>
+    </default>      
+    
 </config>
