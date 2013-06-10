@@ -210,13 +210,15 @@ background: white;
 }
 
 #menu .pop_item .image {
-position: absolute;
-top: 0;
-left: 0;
-padding: 2px;
-border: 1px solid #fff;
-border-image: initial;
-height: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px;
+    border-image: initial;
+    -webkit-box-shadow: 0px 0px 22px -4px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 0px 22px -4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 22px -4px rgba(0, 0, 0, 0.15);
+    border: 1px solid #fff;
 }
 
 #menu .pop_item .title {

@@ -75,10 +75,11 @@ jQuery(function($){
             }
         };
         $('.dropdown-container').hoverIntent( config );
-    
+
         /* Product Grid */
         $(".products-grid .item").hover(
             function() {
+
                 $(this).removeClass("shadow");
                 $(this).children('.product-item').children('.promo-sale').hide();
                 $(this).children('.product-item').children('.promo-new').hide();
