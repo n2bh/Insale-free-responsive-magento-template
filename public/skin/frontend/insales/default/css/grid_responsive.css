@@ -895,6 +895,9 @@
     #nav li a {
         padding: 13px 7px 9px 7px;
     }
+    .nav-container #menu {
+        width: 900px;
+    }    
     
     
     /* Sidebar */

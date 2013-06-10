@@ -87,7 +87,14 @@ body          { background:#fff; color:#7f7f7f; text-align:center; }
 img           { border:0; vertical-align:top; }
 
 p             { color:#aaa; }
-a             { color:#666; text-decoration:none; }
+a             { 
+    color:#666; 
+    text-decoration:none;
+    -moz-transition: color 700ms ease;
+    -webkit-transition: color 700ms ease;
+    -o-transition: color 700ms ease;
+    transition: color 700ms ease;       
+}
 a:hover       { text-decoration:none; }
 :focus        { outline: 0; }
 
@@ -1319,6 +1326,13 @@ tr.tax-details-first td { border-top:1px solid #d2d8db; }
     text-align: right;
     text-decoration: none;
     text-transform: uppercase;
+    
+    text-decoration:none;
+    -moz-transition: color 700ms ease;
+    -webkit-transition: color 700ms ease;
+    -o-transition: color 700ms ease;
+    
+    transition: color 700ms ease;         
 }
 
 .website-header .header-bottom .cart a:hover { text-decoration: none;}

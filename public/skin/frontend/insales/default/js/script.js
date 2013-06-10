@@ -48,6 +48,10 @@ jQuery(function($){
  
     $.fn.pageEffects = function () {
         
+        $('.page-title h1').shuffleLetters();
+        $('.product-shop .product-name h1').shuffleLetters();
+        $('.promo-divider span').shuffleLetters();
+        
         /* Drop-downs */        
         var config = {
             over: function(){
