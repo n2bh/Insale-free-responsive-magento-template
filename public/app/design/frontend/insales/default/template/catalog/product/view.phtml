@@ -49,39 +49,13 @@
 
             <div class="grid_7 alpha">
                 <div class="product-img-box">
-                    <?php 
-
-                        $today =  time();
-
-                        $_promo_sale='';
-                        $specialprice = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialPrice(); 
-                        $specialPriceFromDate = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialFromDate();
-                        $specialPriceToDate = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialToDate();
-
-                        if ($specialprice):
-                            if($today >= strtotime( $specialPriceFromDate) && $today <= strtotime($specialPriceToDate) 
-                                    || $today >= strtotime( $specialPriceFromDate) && is_null($specialPriceToDate)):
-                                $_promo_sale = '<div class="promo-sale"> </div>';
-                            endif;
-                        endif;     
-
-                        $_promo_new='';
-                        $newFromDate = $_product->getData('news_from_date');
-                        $newToDate = $_product->getData('news_to_date');
-        //                $newToDateTimestamp = Mage::getModel('core/date')->timestamp(strtotime($_product->getData('news_to_date')));
-                        if ($newFromDate):
-
-                            if($today >= strtotime( $newFromDate) && $today <= strtotime($newToDate) 
-                                    || $today >= strtotime( $newFromDate) && is_null($newToDate)):
-                                $_promo_new = '<div class="promo-new"> </div>';
-                            endif;
-                        endif;                        
-                    ?>             
-                    
-                    <div class="promo-container">
-                        <?php echo $_promo_sale; ?>
-                        <?php echo $_promo_new; ?>                        
-                    </div>
+                            <div class="promo-container">
+                                <?php 
+                                    $_promo = $this->helper('insale/data')->getPromoLabels($_product);
+                                    echo $_promo['sale'];                        
+                                    echo $_promo['new'];                        
+                                ?>   
+                            </div>     
                     
                     <?php echo $this->getChildHtml('media') ?>
                 </div>

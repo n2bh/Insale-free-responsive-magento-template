@@ -33,7 +33,7 @@
             <action method="addCss"><stylesheet>css/grid_responsive.css</stylesheet><params/></action>
             <action method="addCss"><stylesheet>css/flexslider.css</stylesheet><params/></action>     
               
-            <action method="addCss"><stylesheet>css/styles-ie.css</stylesheet><params/><if>lt IE 9</if></action>     
+            <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lt IE 9</if></action>
             
             <action method="addItem"><type>skin_js</type><name>js/css3-mediaqueries.js</name><params/><if>lt IE 9</if></action>
             <action method="addItem"><type>skin_js</type><name>js/selectivizr-min.js</name><params/><if>lt IE 9</if></action>
@@ -47,7 +47,11 @@
             <action method="addItem" ifconfig="insale/general/ajaxcart_enabled"><type>skin_js</type><name>magazento_ajaxcart/jquery.ajaxcart.js</name></action>     
             
                    
-            <action method="addItem"><type>skin_js</type><name>js/html5.js</name><params/><if>lt IE 9</if></action>                                 
+            <action method="addItem"><type>skin_js</type><name>js/html5.js</name><params/><if>lt IE 9</if></action>     
+            
+            <!-- MegaMenu-->
+            <action method="addCss"><stylesheet>ip_tabs/tabs.css</stylesheet></action>
+            <action method="addCss"><stylesheet>ip_tabs/menustyle.css</stylesheet></action>                                                                                                
         </reference>
     </default>
 

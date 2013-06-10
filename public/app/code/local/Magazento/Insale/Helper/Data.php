@@ -20,7 +20,7 @@ class Magazento_Insale_Helper_Data extends Mage_Core_Helper_Abstract {
         if ($specialprice):
             if($today >= strtotime( $specialPriceFromDate) && $today <= strtotime($specialPriceToDate) 
                     || $today >= strtotime( $specialPriceFromDate) && is_null($specialPriceToDate)):
-                $_promo_sale = '<div class="promo-sale"> </div>';
+                $_promo_sale = '<div class="promo-sale">'.Mage::helper('core')->__('sale').'</div>';
             endif;
         endif;     
 
@@ -31,7 +31,7 @@ class Magazento_Insale_Helper_Data extends Mage_Core_Helper_Abstract {
 
             if($today >= strtotime( $newFromDate) && $today <= strtotime($newToDate) 
                     || $today >= strtotime( $newFromDate) && is_null($newToDate)):
-                $_promo_new = '<div class="promo-new"> </div>';
+                $_promo_new = '<div class="promo-new"> '.Mage::helper('core')->__('new').'</div>';
             endif;
         endif;     
         

@@ -31,11 +31,15 @@
  * @see Mage_Page_Block_Html_Topmenu
  */
 ?>
-<?php $_menu = $this->getHtml('level-top') ?>
-<?php if($_menu): ?>
-<div class="nav-container">
-    <ul id="nav">
-        <?php echo $_menu ?>
-    </ul>
-</div>
-<?php endif ?>
+<?php if (Mage::getStoreConfig('insale/general/megamenu')): ?>
+    <?php echo $this->getLayout()->createBlock("tabs/navigation")->setTemplate("ip_tabs/navigation.phtml")->toHtml(); ?>
+<?php else: ?>
+    <?php $_menu = $this->getHtml('level-top') ?>
+    <?php if($_menu): ?>
+    <div class="nav-container">
+        <ul id="nav">
+            <?php echo $_menu ?>
+        </ul>
+    </div>
+    <?php endif ?>
+<?php endif; ?>

@@ -53,33 +53,6 @@
                                 <div class="product-item">      
                                     
                                     <?php 
-                                        $_product = $_link;
-                                        $today =  time();
-                                        $_promo_sale='';
-                                        $specialprice = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialPrice(); 
-                                        $specialPriceFromDate = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialFromDate();
-                                        $specialPriceToDate = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialToDate();
-
-                                        if ($specialprice):
-                                            if($today >= strtotime( $specialPriceFromDate) && $today <= strtotime($specialPriceToDate) 
-                                                    || $today >= strtotime( $specialPriceFromDate) && is_null($specialPriceToDate)):
-                                                $_promo_sale = '<div class="promo-sale"> </div>';
-                                            endif;
-                                        endif;     
-
-                                        $_promo_new='';
-                                        $newFromDate = $_product->getData('news_from_date');
-                                        $newToDate = $_product->getData('news_to_date');
-                                        if ($newFromDate):
-
-                                            if($today >= strtotime( $newFromDate) && $today <= strtotime($newToDate) 
-                                                    || $today >= strtotime( $newFromDate) && is_null($newToDate)):
-                                                $_promo_new = '<div class="promo-new"> </div>';
-                                            endif;
-                                        endif;                        
-                                    ?>          
-
-                                    <?php 
                                         $_gallery = Mage::getModel('catalog/product')->load($_link->getId())->getMediaGalleryImages();
                                         $_image = null;
                                         if (count($_gallery)) {
@@ -98,9 +71,12 @@
                                     <a href="#" onclick="setLocation('<?php echo $this->getAddToCartUrl($_link) ?>');" class="btn-cart btn-cart-icon">#</a>
 
                                     <div class="promo-container">
-                                        <?php echo $_promo_sale; ?>
-                                        <?php echo $_promo_new; ?>                        
-                                    </div>                                    
+                                        <?php 
+                                            $_promo = $this->helper('insale/data')->getPromoLabels($_link);
+                                            echo $_promo['sale'];                        
+                                            echo $_promo['new'];                        
+                                        ?>   
+                                    </div>                                      
                                     <h3 class="product-name"><a href="<?php echo $_link->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_link->getName()) ?>"><?php echo $this->htmlEscape($_link->getName()) ?></a></h3>
 
                                     <div class="product-name-divider">

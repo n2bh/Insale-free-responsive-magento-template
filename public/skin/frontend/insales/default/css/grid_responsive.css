@@ -936,11 +936,11 @@
     .products-grid li.item {
         width: 218px;
     }    
-    .products-grid .product-name {
+/*    .products-grid .product-name {
         line-height: 14px;
-    }    
+    }    */
     .products-grid .product-item .product-image img {
-        width: 206px;
+        width: 191px;
     }
     
     .products-grid li .product-item-detailed {

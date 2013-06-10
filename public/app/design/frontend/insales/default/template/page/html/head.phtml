@@ -72,7 +72,8 @@
 
 <!--Google Fonts-->
 
-<link href='http://fonts.googleapis.com/css?family=<?php echo Mage::getStoreConfig('insale/general/googlefonts');?>:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=<?php echo Mage::getStoreConfig('insale/general/googlefonts');?>:100,200,300,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=<?php echo Mage::getStoreConfig('insale/general/googlefonts2');?>:100,200,300,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
 <?php 
 $css_color1 = Mage::getStoreConfig('insale/general/color1');
@@ -80,7 +81,20 @@ $css_color2 = Mage::getStoreConfig('insale/general/color2');
 $css_color3 = Mage::getStoreConfig('insale/general/color3');
 ?>
 <style type="text/css">
-    body { font:12px/1.55 '<?php echo Mage::getStoreConfig('insale/general/googlefonts');?>'}
+    body { 
+        font:12px/1.55 '<?php echo Mage::getStoreConfig('insale/general/googlefonts');?>'
+    }
+    
+    .promo-banner .promo-text,
+    .block .block-title,
+    .page-title h1, 
+    .page-title h2,
+    .product-shop .product-name,
+    .block .block-subtitle,
+    .price-box,
+    .promo-divider span { 
+        font-family: '<?php echo Mage::getStoreConfig('insale/general/googlefonts2');?>'
+    }
 
     
     /* FIRST COLOR*/
@@ -108,14 +122,15 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     .website-header .header-bottom .cart .cart-icon,
     .website-header.default .header-container  .logo-container,
     
-    .slider-items .btn-cart-icon,
     .sidebar .sidebar-triangle,
     
     .ajaxcart-checkout-link,
     .ajaxcart-continue-link,
     .big-shopping-cart,
     
-    footer .footer-top .footer-newsletter .newsletter-subscribe .newsletter-icon
+    footer .footer-top .footer-newsletter .newsletter-subscribe .newsletter-icon,
+    
+    .menu-footer 
     {
         background-color: <?php echo $css_color1; ?>; 
         /*background-color: #fe5252;*/ 
@@ -163,15 +178,13 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     /* SECOND COLOR*/
     button.button span,
     .button.view-cart span,
+    .promo-sale,
     .navigation-buttons button.scroll-left span
     {
-        background: <?php echo $css_color2; ?>; 
+        background-color: <?php echo $css_color2; ?>; 
         /*background: #fe6b6b;*/
     }
-    .special-price,
-    .price-box,
-    .view-more-link,
-    .ajaxlayerednavigation-count 
+    .view-more-link
     {
         color: <?php echo $css_color2; ?>; 
         /*color: #fe6b6b;*/
@@ -179,11 +192,19 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     
     
     /* THIRD COLOR*/
+    .slider-items .btn-cart-icon,    
+    .promo-new,
     .product-shop button.button span,
     .cart .btn-proceed-checkout span,
     .buttons-set button.button span,
-    .products-grid .product-item-detailed .price-box {
+    .products-grid .product-item-detailed .price-box{
         background-color: <?php echo $css_color3; ?>; 
+        /*background: #f12712;*/
+    }
+    .special-price,
+    .price-box
+    {
+        color: <?php echo $css_color3; ?>; 
         /*background: #f12712;*/
     }
     

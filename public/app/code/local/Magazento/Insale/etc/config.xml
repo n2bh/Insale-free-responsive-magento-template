@@ -67,6 +67,7 @@
                 <color1>#fe5252</color1>                
                 <color2>#fe6b6b</color2>                
                 <color3>#f0525d</color3>                
+                <megamenu>0</megamenu>                
             </general>
         </insale>
     </default>      
