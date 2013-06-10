@@ -25,9 +25,9 @@ class Ip_Tabs_Block_Navigation extends Mage_Catalog_Block_Navigation {
 				if ($item->getcssStyle()) $style = 'style="'.$item->getcssStyle().'"'; 
 				
 				if ($item->getType() == 1 ) 
-					$html .= '<li id="tab'.$i.'" class="tab'. $class .' '.$item['align_tab'].'"><a onclick="return false" '.$style.' href="'.$item->getUrl().'">'.$item['title'].'</a></li>';
+					$html .= '<li id="tab'.$i.'" class="tab'. $class .' tab-item '.$item['align_tab'].'"><a onclick="return false" '.$style.' href="'.$item->getUrl().'">'.$item['title'].'</a></li>';
 				if ($item->getType() == 0 ) 
-					$html .= '<li id="tab'.$i.'" class="tab'. $class .' '.$item['align_tab'].'"><a  '.$style.' href="'.$item->getUrl().'">'.$item['title'].'</a></li>';
+					$html .= '<li id="tab'.$i.'" class="tab'. $class .'  '.$item['align_tab'].'"><a  '.$style.' href="'.$item->getUrl().'">'.$item['title'].'</a></li>';
 
         }
 

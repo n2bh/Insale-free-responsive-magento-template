@@ -92,7 +92,15 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     .product-shop .product-name,
     .block .block-subtitle,
     .price-box,
-    .promo-divider span { 
+    .widget-new-products header h2,
+    .widget-sale-products header h2,
+    .navigation-buttons span,
+    .view-more-link,
+    .promo-divider span,
+    #menu h2.menu-content-header,
+    #main .menu-footer a
+    
+    { 
         font-family: '<?php echo Mage::getStoreConfig('insale/general/googlefonts2');?>'
     }
 
@@ -128,9 +136,7 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     .ajaxcart-continue-link,
     .big-shopping-cart,
     
-    footer .footer-top .footer-newsletter .newsletter-subscribe .newsletter-icon,
-    
-    .menu-footer 
+    footer .footer-top .footer-newsletter .newsletter-subscribe .newsletter-icon
     {
         background-color: <?php echo $css_color1; ?>; 
         /*background-color: #fe5252;*/ 
@@ -169,7 +175,8 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     #nav ul li.active > a,
     #nav ul li.over > a,    
     #nav ul li.over > a,    
-    .breadcrumbs .breadcrumbs-last
+    .breadcrumbs .breadcrumbs-last,
+    #main ul.subsection_tabs li.tab a.active
     {
         color: <?php echo $css_color1; ?>; 
         /*color: #fe5252;*/

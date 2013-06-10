@@ -146,7 +146,7 @@ ul,ol         { list-style:none; }
 .no-margin    { margin:0 !important; }
 .no-padding   { padding:0 !important; }
 .no-bg        { background:none !important; }
-.view-more-link { text-transform: uppercase;}
+.view-more-link { text-transform: uppercase; font-weight: 600;}
 /* ======================================================================================= */
 
 /* ======================================================================================= */
@@ -3515,11 +3515,11 @@ footer .footer-ribbon {background:#3c3c3c;color:#c4c4c4;font-size:12px;padding:2
 .recently-viewed .item .product-item {
     float: left;
     width: 148px;
-    margin-right: 10px;
+    margin-right: 20px;
     -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
-    padding: 5px 7px;
+    padding: 10px 10px;
     }
 .recently-viewed .item .product-item .product-name {
     margin: 6px 0 2px;
