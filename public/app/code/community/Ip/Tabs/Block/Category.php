@@ -7,56 +7,34 @@
  */
 ?>
 <?php
-class Ip_Tabs_Block_Popular extends Mage_Catalog_Block_Product_Abstract {
+class Ip_Tabs_Block_Category extends Mage_Core_Block_Template {
 
-
-	protected function _construct() {
-		parent::_construct();
-                
-                $cat_id = $this->getData('categoryid');
-		$this->addData(array(
-                        'cache_lifetime' => 86400,
-                        'cache_tags' => array("iptabs_popular" ."_".$cat_id.'_'.Mage::app()->getStore()->getId()),
-                        'cache_key' => "iptabs_popular".'_'.$cat_id.'_'.Mage::app()->getStore()->getId(),                    
-		));
-                
-                
-	}
+        public function __construct()
+        {
+            parent::__construct();
+            $this->setTemplate('ip_tabs/category.phtml');
+        }    
         
-        protected function _beforeToHtml() {
-    	
-			//var_dump('-->>');
-			// var_dump($this->getData('count'));
-			// var_dump($this->getData('categoryid'));
-			
-            $storeId    = Mage::app()->getStore()->getId();
-            $products = Mage::getResourceModel('reports/product_collection')
-                        ->addOrderedQty()
-                        ->addAttributeToSelect('*')
-                        ->addAttributeToSelect(array('name', 'price', 'small_image')) //edit to suit tastes
-                        ->setStoreId($storeId)
-                        ->addStoreFilter($storeId)
-                        ->addViewsCount();
-						
-						
-            Mage::getSingleton('catalog/product_status')->addVisibleFilterToCollection($products);
-            Mage::getSingleton('catalog/product_visibility')->addVisibleInCatalogFilterToCollection($products);
-            $products->setPageSize($this->getData('count'))->setCurPage(1);
-			
-			//category filter		
-            if ($this->getData('categoryid')>0) {
-                $category = Mage::getModel("catalog/category")->load($this->getData('categoryid'));
-                $products->addCategoryFilter($category); 
+        
+        public function drawNestedMenus($children, $level=1,$morehref ='') {
+            $html = '<ul>';
+            $i=0;
+            foreach ($children as $child) {
+
+                    $_category = Mage::getModel("catalog/category")->load($child);
+
+                    $html .= '<li class="level' . $level . '">';
+                    $html .= '<a class="category-item-icon " href="' . $_category->getUrl() . '"><span class="level' . $level . '">' . $this->htmlEscape($_category->getName()) . '</span></a>';
+                    $activeChildren = $this->getChildren($child);
+                    if (sizeof($activeChildren) > 0) {
+                        $html .= $this->drawNestedMenus($activeChildren, $level + 1,$_category->getUrl() );
+                    }
+                    $i++;
+                    $html .= '</li>';
             }
-							
-            $this->setProductCollection($products);
-            return parent::_beforeToHtml();
-	}
-}
+            $html .= '</ul>';
+            return $html;
+        }
+
     
-
-
-
-
-
-
+}

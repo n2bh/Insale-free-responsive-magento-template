@@ -1363,7 +1363,7 @@ tr.tax-details-first td { border-top:1px solid #d2d8db; }
 
 
 .website-header .header-bottom .cart .cart-content {
-    border-top: 5px solid;    
+    border-top: 2px solid;    
     background:#fff;    
     margin-top: 7px;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
@@ -1385,7 +1385,7 @@ tr.tax-details-first td { border-top:1px solid #d2d8db; }
     border-radius: 2px;
 }
 
-.website-header .header-bottom  .dropdown-content .content-triangle {
+.website-header .header-bottom  .content-triangle {
     background: url("../images/elements.png") -393px -194px;
     width: 12px;
     height: 5px;
@@ -1461,7 +1461,7 @@ tr.tax-details-first td { border-top:1px solid #d2d8db; }
     }
     
 .website-header .header-bottom .wishlist .wishlist-content {
-    border-top: 5px solid;
+    border-top: 2px solid;
     background: #fff;
     margin-top: 7px;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
@@ -2223,10 +2223,11 @@ font-size: 22px;
 
 .products-grid li .product-item,.products-grid li .product-item-detailed {
     padding: 10px 12px;
-    border: 1px solid #fff;
+    border: 1px solid #eee;
     border-radius: 3px;
     -webkit-border-radius: 3px;      
-    -moz-border-radius: 3px;        
+    -moz-border-radius: 3px;  
+    
 }
 
 /*.products-grid li .product-item .promo-sale,

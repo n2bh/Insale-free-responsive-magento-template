@@ -82,17 +82,7 @@
 </td>
 <td>
 <h2 class="menu-content-header">Brands</h2>
-<ul class="logo_grid">
-<li><a href="/tablet-pcs+ipads/brand/apple/"><img title="Apple" src="http://i4.expansys.com/i/man/50x50/51.jpg" alt="Apple" width="50" height="50" /></a></li>
-<li><a href="/tablet-pcs+ipads/brand/archos/"><img title="Archos" src="http://i4.expansys.com/i/man/50x50/55.jpg" alt="Archos" width="50" height="50" /></a></li>
-<li><a href="/tablet-pcs+ipads/brand/asus/"><img title="ASUS" src="http://i4.expansys.com/i/man/50x50/64.jpg" alt="ASUS" width="50" height="50" /></a></li>
-<li><a href="/tablet-pcs+ipads/brand/dell/"><img title="Dell" src="http://i4.expansys.com/i/man/50x50/232.jpg" alt="Dell" width="50" height="50" /></a></li>
-<li><a href="/tablet-pcs+ipads/brand/hp/"><img title="HP" src="http://i4.expansys.com/i/man/50x50/396.jpg" alt="HP" width="50" height="50" /></a></li>
-<li><a href="/tablet-pcs+ipads/brand/motorola/"><img title="Motorola" src="http://i4.expansys.com/i/man/50x50/565.jpg" alt="Motorola" width="50" height="50" /></a></li>
-<li><a href="/tablet-pcs+ipads/brand/samsung/"><img title="Samsung" src="http://i4.expansys.com/i/man/50x50/783.jpg" alt="Samsung" width="50" height="50" /></a></li>
-<li><a href="/tablet-pcs+ipads/brand/toshiba/"><img title="Toshiba" src="http://i4.expansys.com/i/man/50x50/935.jpg" alt="Toshiba" width="50" height="50" /></a></li>
-<li><a href="/tablet-pcs+ipads/brand/viewsonic/"><img title="ViewSonic" src="http://i4.expansys.com/i/man/50x50/999.jpg" alt="ViewSonic" width="50" height="50" /></a></li>
-</ul>
+
 </td>
 <td>
 <h2 class="menu-content-header">Popular</h2>

@@ -12,23 +12,15 @@ class Ip_Tabs_Block_Popular extends Mage_Catalog_Block_Product_Abstract {
 
 	protected function _construct() {
 		parent::_construct();
-                
-                $cat_id = $this->getData('categoryid');
 		$this->addData(array(
                         'cache_lifetime' => 86400,
-                        'cache_tags' => array("iptabs_popular" ."_".$cat_id.'_'.Mage::app()->getStore()->getId()),
-                        'cache_key' => "iptabs_popular".'_'.$cat_id.'_'.Mage::app()->getStore()->getId(),                    
+                        'cache_tags' => array("iptabs_popular" ."_".Mage::app()->getStore()->getId()),
+                        'cache_key' => "iptabs_popular".'_'.Mage::app()->getStore()->getId(),                    
 		));
-                
-                
 	}
         
         protected function _beforeToHtml() {
     	
-			//var_dump('-->>');
-			// var_dump($this->getData('count'));
-			// var_dump($this->getData('categoryid'));
-			
             $storeId    = Mage::app()->getStore()->getId();
             $products = Mage::getResourceModel('reports/product_collection')
                         ->addOrderedQty()

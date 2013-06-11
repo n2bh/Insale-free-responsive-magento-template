@@ -9,9 +9,16 @@
 <?php
 class Ip_Tabs_Block_Navigation extends Mage_Catalog_Block_Navigation {
 
-	
-// -----------------------------------------------------------------------------
-	public function drawTabsTabs() {
+    protected function _construct() {
+            parent::_construct();
+            $this->addData(array(
+                    'cache_lifetime' => 86400,
+                    'cache_tags' => array("iptabs_navigation" ."_".Mage::app()->getStore()->getId()),
+                    'cache_key' => "iptabs_navigation".'_'.Mage::app()->getStore()->getId(),                    
+            ));
+    }
+    
+    public function drawTabsTabs() {
         $html = '';
         $data = Mage::getModel('tabs/data')->getTabs();
 		$html='';
@@ -25,7 +32,10 @@ class Ip_Tabs_Block_Navigation extends Mage_Catalog_Block_Navigation {
 				if ($item->getcssStyle()) $style = 'style="'.$item->getcssStyle().'"'; 
 				
 				if ($item->getType() == 1 ) 
-					$html .= '<li id="tab'.$i.'" class="tab'. $class .' tab-item '.$item['align_tab'].'"><a onclick="return false" '.$style.' href="'.$item->getUrl().'">'.$item['title'].'</a></li>';
+					$html .= '<li id="tab'.$i.'" class="tab'. $class .' tab-item '.$item['align_tab'].'">
+                                                    <a '.$style.' href="'.$item->getUrl().'">'.$item['title'].'<span class="content-triangle"></span></a>
+                                                    
+                                                  </li>';
 				if ($item->getType() == 0 ) 
 					$html .= '<li id="tab'.$i.'" class="tab'. $class .'  '.$item['align_tab'].'"><a  '.$style.' href="'.$item->getUrl().'">'.$item['title'].'</a></li>';
 
@@ -76,7 +86,7 @@ class Ip_Tabs_Block_Navigation extends Mage_Catalog_Block_Navigation {
 			if ($item->getType() == 1 ) {
 						
 				$footer = '<div class="menu-footer">';
-				$footer.= '	<div class="footer-title"><a href="'.$item->getUrl().'">' .$item->getTitle().' '.Mage::helper('core')->__('view all').'</a></div>';	
+				$footer.= '	<div class="footer-title"><a href="'.$item->getUrl().'"> '.Mage::helper('core')->__('Visit').' ' .$item->getTitle().' </a></div>';	
 				$footer.= '</div>';						
 				
 				

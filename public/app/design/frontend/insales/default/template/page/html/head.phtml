@@ -81,7 +81,9 @@ $css_color2 = Mage::getStoreConfig('insale/general/color2');
 $css_color3 = Mage::getStoreConfig('insale/general/color3');
 ?>
 <style type="text/css">
-    body { 
+    body,
+    #main ul.subsection_tabs
+    { 
         font:12px/1.55 '<?php echo Mage::getStoreConfig('insale/general/googlefonts');?>'
     }
     
@@ -97,8 +99,8 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     .navigation-buttons span,
     .view-more-link,
     .promo-divider span,
-    #menu h2.menu-content-header,
-    #main .menu-footer a
+    
+    .nav-container 
     { 
         font-family: '<?php echo Mage::getStoreConfig('insale/general/googlefonts2');?>'
     }
@@ -116,7 +118,7 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     .email-friend-icon,
     .btn-remove,
     .website-header-scroll,
-    .website-header .header-bottom  .dropdown-content .content-triangle,
+    .website-header .header-bottom .content-triangle,
     .products-grid .product-item-detailed .link-wishlist-icon,
     .products-grid .product-item-detailed .link-compare-icon,
     .product-view .product-sidebar .product-info-shipping,
@@ -154,7 +156,8 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     #tabs .product-tab.active,
     
     .ajaxcart-result, 
-    .ajaxcart-loading
+    .ajaxcart-loading,
+    .nav-container #menu 
     {
         border-color: <?php echo $css_color1; ?>; 
         /*border-color: #fe5252;*/
