@@ -33,7 +33,7 @@ class Ip_Tabs_Block_Navigation extends Mage_Catalog_Block_Navigation {
 				
 				if ($item->getType() == 1 ) 
 					$html .= '<li id="tab'.$i.'" class="tab'. $class .' tab-item '.$item['align_tab'].'">
-                                                    <a '.$style.' href="'.$item->getUrl().'">'.$item['title'].'<span class="content-triangle"></span></a>
+                                                    <a '.$style.' href="'.$item->getUrl().'">'.$item['title'].'</a>
                                                     
                                                   </li>';
 				if ($item->getType() == 0 ) 

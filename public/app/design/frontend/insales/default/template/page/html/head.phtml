@@ -81,8 +81,7 @@ $css_color2 = Mage::getStoreConfig('insale/general/color2');
 $css_color3 = Mage::getStoreConfig('insale/general/color3');
 ?>
 <style type="text/css">
-    body,
-    #main ul.subsection_tabs
+    body
     { 
         font:12px/1.55 '<?php echo Mage::getStoreConfig('insale/general/googlefonts');?>'
     }
@@ -98,9 +97,8 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     .widget-sale-products header h2,
     .navigation-buttons span,
     .view-more-link,
-    .promo-divider span,
+    .promo-divider span
     
-    .nav-container 
     { 
         font-family: '<?php echo Mage::getStoreConfig('insale/general/googlefonts2');?>'
     }
@@ -156,8 +154,7 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     #tabs .product-tab.active,
     
     .ajaxcart-result, 
-    .ajaxcart-loading,
-    .nav-container #menu 
+    .ajaxcart-loading
     {
         border-color: <?php echo $css_color1; ?>; 
         /*border-color: #fe5252;*/
@@ -179,14 +176,14 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     #nav ul li.over > a,    
     #nav ul li.over > a,    
     .breadcrumbs .breadcrumbs-last,
-    #main ul.subsection_tabs li.tab a.active
+    #main ul.subsection_tabs li.tab-item a.active
     {
         color: <?php echo $css_color1; ?>; 
         /*color: #fe5252;*/
     }    
     
     /* SECOND COLOR*/
-    button.button span,
+     button.button span,
     .button.view-cart span,
     .promo-sale,
     .navigation-buttons button.scroll-left span

@@ -102,7 +102,7 @@ jQuery(function($){
                 $(this).children('.product-item-detailed').children(".price-box")
                     .css( "right", "-50px" )
                     .css( "opacity", "0" );
-                $(this).children('.product-item-detailed').animate({boxShadow: '0 0 0 #ddd'});
+                $(this).children('.product-item-detailed').animate({boxShadow: '0 0 16px #bbb'});
                 $(this).children('.product-item-detailed').hide();            
 
             }

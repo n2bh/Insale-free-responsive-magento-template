@@ -8,13 +8,7 @@
                 <headerslider translate="title" module="headerslider">
                     <title>Header Slider</title>
                     <sort_order>15</sort_order>
-                    <children>
-                        <slide translate="title">
-                            <title>Manage Slides</title>
-                            <action>headerslider/admin_slide/index</action>
-                            <sort_order>10</sort_order>
-                        </slide>
-                    </children>
+                    <action>headerslider/admin_slide/index</action>
                 </headerslider>
             </children>
         </magazento>
@@ -28,7 +22,7 @@
                             <config>
                                 <children>
                                     <headerslider translate="title" module="headerslider">
-                                        <title>FirstSlider Section</title>
+                                        <title>Header Section</title>
                                     </headerslider>
                                 </children>
                             </config>
@@ -39,14 +33,7 @@
                         <sort_order>71</sort_order>
                         <children>
                             <headerslider translate="title" module="headerslider">
-                                <title>FirstSlider</title>
-                                <sort_order>15</sort_order>
-                                <children>
-                                    <slide translate="title">
-                                        <title>Manage slides</title>
-                                        <sort_order>10</sort_order>
-                                    </slide>
-                                </children>
+                                <title>Header Slider</title>
                             </headerslider>
                         </children>
                     </magazento>
