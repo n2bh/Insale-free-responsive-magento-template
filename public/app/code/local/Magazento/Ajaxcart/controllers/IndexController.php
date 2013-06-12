@@ -1,4 +1,11 @@
 <?php
+/**
+ * 
+ * @category  Magazento
+ * @author    Ivan Proskuryakov http://www.magazento.com <volgodark@gmail.com>
+ * @copyright Copyright (C)2013 Magazento
+ *
+ */
 
 class Magazento_Ajaxcart_IndexController extends Mage_Core_Controller_Front_Action
 {

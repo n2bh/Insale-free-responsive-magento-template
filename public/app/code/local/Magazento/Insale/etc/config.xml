@@ -63,7 +63,8 @@
                 <logo>logo.png</logo>                        
                 <logo_small>logo-small.png</logo_small>                        
                 <logo_mini>logo-mini.png</logo_mini>                
-                <googlefonts>PT Sans</googlefonts>                
+                <googlefonts>Default</googlefonts>                
+                <googlefonts2>Default</googlefonts2>                
                 <color1>#fe5252</color1>                
                 <color2>#fe6b6b</color2>                
                 <color3>#f0525d</color3>                

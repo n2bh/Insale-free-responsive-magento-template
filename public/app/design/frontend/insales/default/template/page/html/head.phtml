@@ -1,27 +1,10 @@
 <?php
 /**
- * Magento
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Academic Free License (AFL 3.0)
- * that is bundled with this package in the file LICENSE_AFL.txt.
- * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/afl-3.0.php
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade Magento to newer
- * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magentocommerce.com for more information.
- *
- * @category    design
- * @package     base_default
- * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
- * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * 
+ * @category  design
+ * @package   insale_default
+ * @author    Ivan Proskuryakov http://www.magazento.com <volgodark@gmail.com>
+ * @copyright Copyright (C)2013 Magazento
  */
 ?>
 <meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
@@ -45,10 +28,6 @@
 <?php echo $this->helper('core/js')->getTranslatorScript() ?>
 <?php echo $this->getIncludes() ?>
 
-
-
-<!--Facebook-->
-
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -57,8 +36,6 @@
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-
-<!--Pinterest-->
 
 <script type="text/javascript">
 (function(d){
@@ -70,46 +47,45 @@
 }(document));
 </script>
 
-<!--Google Fonts-->
-
-<link href='http://fonts.googleapis.com/css?family=<?php echo Mage::getStoreConfig('insale/general/googlefonts');?>:100,200,300,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=<?php echo Mage::getStoreConfig('insale/general/googlefonts2');?>:100,200,300,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-
 <?php 
+$css_font1 = Mage::getStoreConfig('insale/general/googlefonts');
+$css_font2 = Mage::getStoreConfig('insale/general/googlefonts2');
 $css_color1 = Mage::getStoreConfig('insale/general/color1');
 $css_color2 = Mage::getStoreConfig('insale/general/color2');
 $css_color3 = Mage::getStoreConfig('insale/general/color3');
 ?>
-<style type="text/css">
-    body
-    { 
-        font:12px/1.55 '<?php echo Mage::getStoreConfig('insale/general/googlefonts');?>'
-    }
+<?php if ($css_font1 != 'Default'): ?>
+    <link href='http://fonts.googleapis.com/css?family=<?php echo $css_font1;?>:100,200,300,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body
+        { 
+            font-family: <?php echo Mage::getStoreConfig('insale/general/googlefonts');?>,Arial, Helvetica, sans-serif;
+        }
+    </style>
+<?php endif;?>
     
-    .promo-banner .promo-text,
-    .block .block-title,
-    .page-title h1, 
-    .page-title h2,
-    .product-shop .product-name,
-    .block .block-subtitle,
-    .price-box,
-    .widget-new-products header h2,
-    .widget-sale-products header h2,
-    .navigation-buttons span,
-    .view-more-link,
-    .promo-divider span
-    
-    { 
-        font-family: '<?php echo Mage::getStoreConfig('insale/general/googlefonts2');?>'
-    }
+<?php if ($css_font2 != 'Default'): ?>
+    <link href='http://fonts.googleapis.com/css?family=<?php echo $css_font2;?>:100,200,300,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        .promo-banner .promo-text,
+        .widget-new-products header h2,
+        .widget-sale-products header h2,
+        .view-more-link,
+        .box-up-sell header h2,
+        /*.nav-container #menu .menu-content-header,*/
+        .promo-divider span
+        { 
+            font-family: <?php echo Mage::getStoreConfig('insale/general/googlefonts2');?>;
+        }
+    </style>
+<?php endif;?>
 
-    
+<style type="text/css">
     /* FIRST COLOR*/
     #toTop,
     .actions button.btn-cart span.btn-cart-icon,
     .account-login .page-title .page-icon, 
     .account-create .page-title .page-icon,
-    
     .i-pager,
     .link-wishlist-icon,
     .link-compare-icon,
@@ -124,21 +100,16 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     .promo-banner .promo-icon-one,
     .promo-banner .promo-icon-two,
     .promo-banner .promo-icon-three,
-    
     .website-header .header-bottom .wishlist .wishlist-icon,
     .website-header .header-bottom .cart .cart-icon,
     .website-header.default .header-container  .logo-container,
-    
     .sidebar .sidebar-triangle,
-    
     .ajaxcart-checkout-link,
     .ajaxcart-continue-link,
     .big-shopping-cart,
-    
     footer .footer-top .footer-newsletter .newsletter-subscribe .newsletter-icon
     {
         background-color: <?php echo $css_color1; ?>; 
-        /*background-color: #fe5252;*/ 
     }
     
     .customer-account-forgotpassword .main-container .account-forgotpassword,
@@ -152,12 +123,10 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     .cart .totals,
     .opc .active .step-title,
     #tabs .product-tab.active,
-    
     .ajaxcart-result, 
     .ajaxcart-loading
     {
         border-color: <?php echo $css_color1; ?>; 
-        /*border-color: #fe5252;*/
     }   
     
     .form-list label.required em,
@@ -168,19 +137,19 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     .website-header .form-currency .current,
     .website-header .form-language .current,
     .website-header .header-bottom .cart .cart-counter:hover,
-    #nav li a:hover,
-    #nav li.over a,
-    #nav li.active a,
-    #nav ul li a:hover,
-    #nav ul li.active > a,
-    #nav ul li.over > a,    
-    #nav ul li.over > a,    
+    .nav-container #nav li a:hover,
+    .nav-container #nav li.over a,
+    .nav-container #nav li.active a,
+    .nav-container #nav ul li a:hover,
+    .nav-container #nav ul li.active > a,
+    .nav-container #nav ul li.over > a,    
+    .nav-container #nav ul li.over > a,    
     .breadcrumbs .breadcrumbs-last,
     #main ul.subsection_tabs li.tab-item a.active
     {
         color: <?php echo $css_color1; ?>; 
-        /*color: #fe5252;*/
     }    
+    
     
     /* SECOND COLOR*/
      button.button span,
@@ -189,12 +158,10 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     .navigation-buttons button.scroll-left span
     {
         background-color: <?php echo $css_color2; ?>; 
-        /*background: #fe6b6b;*/
     }
     .view-more-link
     {
         color: <?php echo $css_color2; ?>; 
-        /*color: #fe6b6b;*/
     }
     
     
@@ -206,15 +173,11 @@ $css_color3 = Mage::getStoreConfig('insale/general/color3');
     .buttons-set button.button span,
     .products-grid .product-item-detailed .price-box{
         background-color: <?php echo $css_color3; ?>; 
-        /*background: #f12712;*/
     }
     .special-price,
     .price-box
     {
         color: <?php echo $css_color3; ?>; 
-        /*background: #f12712;*/
     }
-    
-    
     
 </style>

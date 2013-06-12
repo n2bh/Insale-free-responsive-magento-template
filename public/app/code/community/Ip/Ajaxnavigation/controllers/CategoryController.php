@@ -43,8 +43,8 @@ class Ip_Ajaxnavigation_CategoryController extends Mage_Catalog_CategoryControll
         }
         $result['minPrice'] = $priceMin;
         $result['maxPrice'] = $priceMax;
-//        $result['categoryName'] = '<div class="page-title category-title"> <h1>' 
-//            . Mage::registry('current_category')->getName() . '</h1></div>';
+        $result['categoryName'] = '<div class="page-title category-title"> <h1>' 
+            . Mage::registry('current_category')->getName() . '</h1></div>';
         
         $this->getResponse()->setBody(Zend_Json::encode($result));        
         

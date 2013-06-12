@@ -1,6 +1,9 @@
 jQuery.noConflict();
 jQuery(function($){
     
+//    $('#nav').mobileMenu();
+    $('.nav-container').meanmenu({ meanScreenWidth: "767"});
+    
     $('.logo-small').hide();
     $('.logo-fixed').hide();
     $('.logo-big').show();

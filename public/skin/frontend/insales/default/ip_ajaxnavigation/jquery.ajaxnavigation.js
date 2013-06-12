@@ -100,11 +100,11 @@ jQuery.setObservers = function() {
         })
     });   
     
-    jQuery.each(jQuery("div.limiter select"), function(element) {
-        jQuery(this).attr("onchange" , "");        
-        jQuery(this).on("change",function(event){
+    jQuery.each(jQuery("div.limiter a"), function(element) {
+//        jQuery(this).attr("onchange" , "");        
+        jQuery(this).on("click",function(event){
             event.preventDefault();     
-            var query = jQuery.getUrlQuery(this.value);
+            var query = jQuery.getUrlQuery(this.href);
             if (query) {
                 var url = categoryUrl + query;
             } else {
@@ -236,7 +236,8 @@ jQuery.ProcessEvent = function(url) {
 //    alert(url);
     jQuery.getJSON(url, function(jsondata) {
         jQuery('.block-layered-nav').html(jsondata.filter);
-        jQuery('.category-products').html(jsondata.categoryName + " " + jsondata.list);
+        jQuery('.category-products').html(jsondata.list);
+//        jQuery('.category-products').html(jsondata.categoryName + " " + jsondata.list);
         jQuery.setObservers();
 
         jQuery("#slider-range" ).slider({

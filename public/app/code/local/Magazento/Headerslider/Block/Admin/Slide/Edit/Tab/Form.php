@@ -1,22 +1,13 @@
 <?php
-/*
- *  Created on Mar 16, 2011
- *  Author Ivan Proskuryakov - volgodark@gmail.com - Magazento.com
- *  Copyright Proskuryakov Ivan. Magazento.com © 2011. All Rights Reserved.
- *  Single Use, Limited Licence and Single Use No Resale Licence ["Single Use"]
+/**
+ * 
+ * @category  Magazento
+ * @author    Ivan Proskuryakov http://www.magazento.com <volgodark@gmail.com>
+ * @copyright Copyright (C)2013 Magazento
+ *
  */
-?><?php
 
 class Magazento_Headerslider_Block_Admin_Slide_Edit_Tab_Form extends Mage_Adminhtml_Block_Widget_Form {
-    /**
-     * Init form
-     */
-//    public function __construct()
-//    {
-//        parent::__construct();
-//        $this->setId('edit_form12121');
-//        $this->setTitle(Mage::helper('headerslider')->__('Slide Information'));
-//    }
 
     /**
      * Load Wysiwyg on demand and Prepare layout

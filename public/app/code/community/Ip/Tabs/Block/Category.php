@@ -1,12 +1,11 @@
 <?php
-/*
- *  Created on Jan 10, 2012
- *  Author Ivan Proskuryakov - volgodark@gmail.com - ecommerceoffice.com
- *  Copyright Proskuryakov Ivan. ecommerceoffice.com © 2011. All Rights Reserved.
- *  Single Use, Limited Licence and Single Use No Resale Licence ["Single Use"]
+/**
+ * 
+ * @category  Magazento
+ * @author    Ivan Proskuryakov http://www.magazento.com <volgodark@gmail.com>
+ * @copyright Copyright (C)2013 Magazento
+ *
  */
-?>
-<?php
 class Ip_Tabs_Block_Category extends Mage_Core_Block_Template {
 
         public function __construct()
@@ -25,8 +24,10 @@ class Ip_Tabs_Block_Category extends Mage_Core_Block_Template {
 
                     $html .= '<li class="level' . $level . '">';
                     $html .= '<a class="category-item-icon " href="' . $_category->getUrl() . '"><span class="level' . $level . '">' . $this->htmlEscape($_category->getName()) . '</span></a>';
-                    $activeChildren = $this->getChildren($child);
-                    if (sizeof($activeChildren) > 0) {
+                    $activeChildren = $_category->getChildren();    
+                    if ($activeChildren) {
+                        $activeChildren = explode(",",$activeChildren);    
+//                        var_dump($activeChildren);
                         $html .= $this->drawNestedMenus($activeChildren, $level + 1,$_category->getUrl() );
                     }
                     $i++;

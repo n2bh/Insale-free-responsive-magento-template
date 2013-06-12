@@ -1,12 +1,11 @@
 <?php
-/*
- *  Created on Jan 10, 2012
- *  Author Ivan Proskuryakov - volgodark@gmail.com - ecommerceoffice.com
- *  Copyright Proskuryakov Ivan. ecommerceoffice.com © 2011. All Rights Reserved.
- *  Single Use, Limited Licence and Single Use No Resale Licence ["Single Use"]
+/**
+ * 
+ * @category  Magazento
+ * @author    Ivan Proskuryakov http://www.magazento.com <volgodark@gmail.com>
+ * @copyright Copyright (C)2013 Magazento
+ *
  */
-?>
-<?php
 class Ip_Tabs_Block_Popular extends Mage_Catalog_Block_Product_Abstract {
 
 

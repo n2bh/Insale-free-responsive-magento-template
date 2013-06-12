@@ -32,6 +32,8 @@
             <action method="addCss"><stylesheet>css/jquery.fancybox.css</stylesheet><params/></action>    
             <action method="addCss"><stylesheet>css/grid_responsive.css</stylesheet><params/></action>
             <action method="addCss"><stylesheet>css/flexslider.css</stylesheet><params/></action>     
+            
+            <action method="addCss"><stylesheet>css/meanmenu.css</stylesheet><params/></action>     
               
             <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lt IE 9</if></action>
             
@@ -43,6 +45,7 @@
             <action method="addItem"><type>skin_js</type><name>js/jquery.animate-shadow-min.js</name><params/></action>   
             <action method="addItem"><type>skin_js</type><name>js/jquery.flexslider-min.js</name><params/></action>               
             <action method="addItem"><type>skin_js</type><name>js/jquery.shuffleLetters.js</name><params/></action>   
+            <action method="addItem"><type>skin_js</type><name>js/jquery.meanmenu.js</name><params/></action>   
             <action method="addItem"><type>skin_js</type><name>js/script.js</name><params/></action>   
             
             <action method="addItem" ifconfig="insale/general/ajaxcart_enabled"><type>skin_js</type><name>magazento_ajaxcart/jquery.ajaxcart.js</name></action>     

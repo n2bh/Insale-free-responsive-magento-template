@@ -70,10 +70,36 @@
                             <show_in_store>1</show_in_store>
                         </logo_mini> 
                         
+<!--                        <image_login_page translate="label comment">
+                            <label>Image Login Page</label>
+                            <comment>Allowed file types: jpeg, gif, png.</comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">magazento_insale</upload_dir>
+                            <base_url type="media" scope_info="1">magazento_insale</base_url>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </image_login_page>                        
+                        <image_checkout_page translate="label comment">
+                            <label>Image Checkout Page</label>
+                            <comment>Allowed file types: jpeg, gif, png.</comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">magazento_insale</upload_dir>
+                            <base_url type="media" scope_info="1">magazento_insale</base_url>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </image_checkout_page> -->
+                        
                         <googlefonts translate="label">
                             <label>Google Font Main</label>
                             <frontend_type>select</frontend_type>
                             <source_model>insale/googlefonts</source_model>
+                            <frontend_model>insale/adminhtml_system_config_form_field_font</frontend_model>
                             <sort_order>60</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -82,10 +108,12 @@
                            </comment>
                         </googlefonts> 
                             
+                            
                         <googlefonts2 translate="label">
                             <label>Google Font Second</label>
                             <frontend_type>select</frontend_type>
-                            <source_model>insale/googlefonts</source_model>
+                            <source_model>insale/googlefonts</source_model>                            
+                            <frontend_model>insale/adminhtml_system_config_form_field_font</frontend_model>
                             <sort_order>70</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
