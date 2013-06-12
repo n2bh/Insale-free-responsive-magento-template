@@ -54,7 +54,7 @@
             <action method="addItem"><type>skin_js</type><name>js/html5.js</name><params/><if>lt IE 9</if></action>     
             
             <!-- MegaMenu-->
-            <action method="addCss"><stylesheet>ip_tabs/menustyle.css</stylesheet></action>                                                                                                
+            <action method="addCss"><stylesheet>css/megamenu.css</stylesheet></action>                                                                                                
         </reference>
     </default>
 

@@ -1,6 +1,6 @@
 .ajaxcart-result .success-msg {
     background:none;
-    color:#000;
+    color:#777;
     padding: 8px !important;
     text-align:left;
     border:none !important;
@@ -35,6 +35,8 @@
 .ajaxcart-loading .loading-text{
     text-align: center;
     padding: 20px 0;
+    color: #777;
+    font-size: 16px;
 }
 .ajaxcart-loading .loading-text img{
     margin-right: 10px;
@@ -96,5 +98,7 @@
     margin-right: 10px;
 }
 .ajaxcart-product-message {
-    
+    font-size: 16px;
+    max-width: 400px;
+    line-height: 1.6em;
 }
