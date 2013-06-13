@@ -1152,12 +1152,12 @@ tr.tax-details-first td { border-top:1px solid #d2d8db; }
 }
 .homepage-slide-content .playme{
     background: url(../images/playme.png) 49px 58px no-repeat;
-    height: 240px;
+    height: 260px;
 }
 .homepage-slide-content .playme2{
     text-align: right;
-    background: url(../images/playme2.png) 66% 58px no-repeat;
-    height: 240px;
+    background: url(../images/playme2.png) 75% 100px no-repeat;
+    height: 260px;
 }
 .homepage-slide-content-data {
     padding: 8%;
@@ -1186,7 +1186,7 @@ tr.tax-details-first td { border-top:1px solid #d2d8db; }
 .promo-divider span {
     background: #fff;
     padding: 20px;
-    font-weight: 100;
+    font-weight: 300;
     color: #676767;
     }
 
@@ -1239,8 +1239,8 @@ tr.tax-details-first td { border-top:1px solid #d2d8db; }
 .website-header .header-container .logo-small{ display: none;}
 .website-header .header-container .logo-fixed{ display: none; margin-top: 3px;}
 .website-header .header-locale {float:left;z-index: 9; }
-.website-header .header-welcome-msg {color:#666666;float:left;margin-top:4px;}
-.website-header .header-welcome-msg .welcome-msg {text-align:center;color: #676767;}
+.website-header .header-welcome-msg {color:#999;float:left;margin-top:4px;}
+.website-header .header-welcome-msg .welcome-msg {text-align:center;color: #999;}
 .website-header .header-toplinks {margin-top:4px;text-align:right;}
 .website-header .header-toplinks .links { float: right;}
 .website-header .header-toplinks .links li { float: left;}
@@ -1249,8 +1249,8 @@ tr.tax-details-first td { border-top:1px solid #d2d8db; }
     padding-left: 10px;
     margin-left: 9px;
 }  
-.website-header .header-top {border-bottom:1px solid #efefef;color:#666666;padding:10px 0;z-index:9;height: 26px; background: #fff;}
-.website-header .header-top a {color:#666666;text-decoration:none;}
+.website-header .header-top {border-bottom:1px solid #efefef;color:#999;padding:10px 0;z-index:9;height: 26px; background: #fff;}
+.website-header .header-top a {color:#999;text-decoration:none;}
 .website-header .header-container .logo {float:right; }
 .website-header .header-container .navigation {
 }
@@ -1332,14 +1332,14 @@ tr.tax-details-first td { border-top:1px solid #d2d8db; }
 .website-header .header-bottom {height:50px; background: #fff;}
 .website-header .header-bottom .cart {float:right;margin-left:0px;margin-top:9px;position:relative;}
 .website-header .header-bottom .cart .cart-counter { 
-    color: #666;
+    color: #999;
     text-decoration: none;
     font-size: 14px;
     line-height: 33px;
-    font-weight: bold;
+    /*font-weight: bold;*/
     text-align: right;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: lowercase;
     
     text-decoration:none;
     -moz-transition: color 700ms ease;

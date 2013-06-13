@@ -85,7 +85,7 @@ class Ip_Tabs_Block_Navigation extends Mage_Catalog_Block_Navigation {
 			if ($item->getType() == 1 ) {
 						
 				$footer = '<div class="menu-footer">';
-				$footer.= '	<div class="footer-title"><a href="'.$item->getUrl().'"> '.Mage::helper('core')->__('>> Visit').' ' .$item->getTitle().' </a></div>';	
+				$footer.= '	<div class="footer-title"><a href="'.$item->getUrl().'"> '.Mage::helper('core')->__('Visit').' ' .$item->getTitle().' </a></div>';	
 				$footer.= '</div>';						
 				
 				

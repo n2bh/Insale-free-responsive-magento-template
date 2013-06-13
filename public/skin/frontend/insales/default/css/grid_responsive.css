@@ -898,7 +898,7 @@
     .nav-container #main ul.subsection_tabs li.tab a {
         padding: 9px 7px 10px 7px;
     }    
-    .nav-container #menu {
+    .website-header .nav-container #menu {
         width: 900px;
     }    
     .website-header.default .header-top {
@@ -1635,7 +1635,7 @@
     .nav-container #main ul.subsection_tabs li.tab a {
         padding: 9px 4px 9px 4px;
     }
-    .nav-container #menu {
+    .website-header .nav-container #menu {
         width: 750px;
     }
     
@@ -2247,7 +2247,7 @@
         width: 166px;
     }    
     .products-grid .product-image img {
-        width: 156px;
+        width: 140px;
     }
     .products-grid li .product-item-detailed {
         left: 0;

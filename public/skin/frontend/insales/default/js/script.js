@@ -10,18 +10,29 @@ jQuery(function($){
             
     function logoImageSwatch () {
         if ($(window).width() >= 1280 ) {
+            $('.logo-big').show();            
             $('.logo-small').hide();
-            $('.logo-big').show();
-        } else {
+            $('.logo-fixed').hide();            
+        } else if ( ($(window).width() >= 767 ) && ($(window).width() < 1280 ))  {
             $('.logo-small').show();
             $('.logo-big').hide();
+            $('.logo-fixed').hide();     
+        } else {
+            $('.logo-big').show();
+            $('.logo-small').hide();
+            $('.logo-fixed').hide();   
         }
     }
 
     logoImageSwatch();
     $(window).resize(function() {
-        if (!$('.logo-fixed').is(":visible")) {
-           logoImageSwatch(); 
+        if ($(window).width() >= 767 ) {        
+            if (!$('.logo-fixed').is(":visible")) {
+               logoImageSwatch(); 
+            }
+        } else {
+            $('.website-header').removeClass('fixed').addClass('default').fadeIn(10);
+            logoImageSwatch(); 
         }
     }); 
     
