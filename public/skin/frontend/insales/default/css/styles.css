@@ -3813,3 +3813,10 @@ footer .footer-ribbon {background:#3c3c3c;color:#c4c4c4;font-size:12px;padding:2
     padding-bottom: 5px;
     margin-top: 20px;
     }
+
+    
+.m-copywright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

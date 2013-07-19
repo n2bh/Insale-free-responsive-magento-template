@@ -65,14 +65,14 @@
             </resources>
         </acl>
     </adminhtml>
-<!--    
+    
     <default>
         <ajaxcart>
             <general>
-                <enabled>1</enabled>
+                <ajaxcart_enabled>1</ajaxcart_enabled>
             </general>
         </ajaxcart>
-    </default>-->
+    </default>
 
 </config>
 

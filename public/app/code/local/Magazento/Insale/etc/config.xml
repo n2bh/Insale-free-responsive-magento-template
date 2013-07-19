@@ -16,6 +16,11 @@
                     <product_viewed>Magazento_Insale_Block_Product_Viewed</product_viewed>
                 </rewrite>
             </reports>            
+            <page>
+                <rewrite>
+                    <html_footer>Magazento_Insale_Block_Html_Footer</html_footer>
+                </rewrite>
+            </page>            
             <checkout>
                 <rewrite>
                     <cart_crosssell>Magazento_Insale_Block_Cart_Crosssell</cart_crosssell>
