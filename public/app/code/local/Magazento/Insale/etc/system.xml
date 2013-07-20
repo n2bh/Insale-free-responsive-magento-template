@@ -159,6 +159,15 @@
                     </fields>
 
                 </general>
+                <info translate="label">
+                    <label>About Template</label>
+                    <frontend_type>text</frontend_type>
+                    <frontend_model>insale/info</frontend_model>
+                    <sort_order>500</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </info>                
             </groups>
         </insale>
     </sections>
