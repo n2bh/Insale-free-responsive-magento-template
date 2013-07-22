@@ -2,14 +2,14 @@ Insale is clean, easy to customize Magento template with responsive & mobile rea
 Many powerful features such as 2 menu variants, admin section, slideshows, new products AjaxCart and AjaxLeyered Navigation.
 Demo package goes with two colors: pink and black.
 
-WEBSITE DEMO:
-Demo Page: http://insale.magazento.com/demo/
-Pink Design: http://insale.magazento.com/pink/
-Black Design: http://insale.magazento.com/black/
+WEBSITE DEMO:<br/>
+Demo Page: http://insale.magazento.com/demo/<br/>
+Pink Design: http://insale.magazento.com/pink/<br/>
+Black Design: http://insale.magazento.com/black/<br/>
 
 
 	
-        - Theme effects based on jQuery library
+	- Theme effects based on jQuery library
 	- Responsive and cross-crowser design
 	- Mobile Ready
 	- Integrated Google fonts
