@@ -1,5 +1,4 @@
 nbproject
-public/app/etc/local.xml
 public/var/cache/*
 public/var/locks/*
 public/var/log/*
