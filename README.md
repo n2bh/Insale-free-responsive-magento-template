@@ -54,8 +54,6 @@ That's all. If you need any help using this theme (all services are paid), pleas
 *Please make sure that this is a free template for Magento CMS, this version contains link to our website magazento.com
 If you're interested in purchasing a developer's license (clean footer version) for this theme, please contact me at service@magazento.com.
 
-Thanks.
-
 Regards,
 Ivan Proskuryakov
 (Magazento.com)
